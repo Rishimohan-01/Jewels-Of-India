@@ -147,34 +147,65 @@ header .blur-rectangle {
 header .blur-rectangle p {
   margin: 0px;
   font-family: Manrope;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  line-height: 44px;
   text-align: left;
   color: #a17445;
 }
-header .blur-rectangle .days p {
-  margin: 0px;
-  padding-right: 12px;
-  font-size: 16px;
-  color: #4a7f5e;
+header .blur-rectangle .event-time {
+  display: flex;
+  justify-content: space-around;
 }
-header .blur-rectangle .days p:last-child {
-  padding: 0px;
+header .blur-rectangle .event-time .countdown p {
+  font-family: Manrope;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  text-align: center;
+  color: #4a7f5e;
+  margin: 0px;
+}
+header .blur-rectangle .event-time .countdown .time-txt {
+  font-family: Manrope;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #4a7f5e;
 }
 header .blur-rectangle .border::after {
   content: "";
   position: absolute;
+  bottom: 25px;
   width: 2px;
   height: 73px;
   margin: 7px 38px 0 40px;
   background-color: #b2905f;
 }
-
-header .blur-rectangle .number span div span {
+header .blur-rectangle .number .number-content {
+  display: flex;
+  flex-direction: column;
+}
+header .blur-rectangle .number .num {
+  margin: 0px;
+  font-family: Manrope;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  color: #a17445;
+}
+header .blur-rectangle .number .num-text {
+  margin: 0px;
+  font-family: Manrope;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  color: #a17445;
+}
+header .blur-rectangle .number .num-details {
   font-family: Manrope;
   font-size: 16px;
   font-weight: 300;
@@ -184,10 +215,6 @@ header .blur-rectangle .number span div span {
   letter-spacing: normal;
   text-align: center;
   color: #a17445;
-}
-header .blur-rectangle .number .number-content {
-  display: flex;
-  flex-direction: column;
 }
 /* blur rectangle end here */
 
@@ -267,7 +294,11 @@ header .blur-rectangle .number .number-content {
   background-color: #3a5c4a;
   color: #fff;
 }
-
+.exhibitor .exhibitor-features {
+  height: 130px;
+  display: flex;
+  overflow: hidden;
+}
 .exhibitor .exhibitor-features .img-left {
   position: absolute;
   left: 0px;
@@ -278,8 +309,20 @@ header .blur-rectangle .number .number-content {
   right: 0px;
   bottom: -800px;
 }
-.exhibitor .exhibitor-features .company-name .CName {
-  margin-right: 20px;
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.exhibitor .exhibitor-features .company-logo {
+  animation: scroll 20s linear infinite;
+}
+.exhibitor .exhibitor-features .company-logo .CName {
+  margin: 0px 20px;
   width: 228px;
   height: 84px;
   display: flex;
@@ -291,6 +334,7 @@ header .blur-rectangle .number .number-content {
     0 10px 15px -3px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
+
 /* our exhibitor end */
 
 /* visitors hub start */
@@ -454,17 +498,17 @@ header .blur-rectangle .number .number-content {
   text-align: center;
 }
 .about-jewels .about-jewels-video img {
-  width: 800px;
+  width: 775px;
   text-align: center;
   position: relative;
   z-index: 2;
 }
 .about-jewels .about-jewels-video iframe {
-  width: 670px;
-  height: 358px;
+  width: 640px;
+  height: 345px;
   position: absolute;
-  left: 345px;
-  top: 2828px;
+  left: 355px;
+  top: 2909px;
 }
 /* about jewels end */
 
@@ -643,7 +687,7 @@ input[type="checkbox"]:focus {
   color: #a17445;
 }
 .faq .faq-content .accordion-item .accordion-button::after {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23a17445'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23a17445' ><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 .faq .faq-content .accordion-item button:focus {
   box-shadow: none;
