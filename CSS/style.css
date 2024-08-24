@@ -554,7 +554,7 @@ header .blur-rectangle .number .num-details {
   padding-bottom: 11px;
 }
 .jewel-form .jewel-form-left .jewel-form-left-content .address img {
-  padding-right: 5px;
+  padding-right: 6px;
 }
 .jewel-form .jewel-form-left .jewel-form-left-content .contact img {
   padding-right: 5px;
@@ -562,25 +562,24 @@ header .blur-rectangle .number .num-details {
 .jewel-form .jewel-form-right h4 {
   font-family: Borest-Standard;
   font-size: 40px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 55px;
-  letter-spacing: normal;
+  font-weight: 400;
+  /* line-height: 5px; */
   text-align: left;
   color: #a17445;
 
   padding-bottom: 48px;
 }
-.jewel-form .jewel-form-right .form-btn {
-  padding-top: 40px;
+.jewel-form .jewel-form-right .space-bottom {
+  padding-bottom: 20px;
+}
+.jewel-form .jewel-form-right .brand-name {
+  padding-bottom: 40px;
 }
 .jewel-form .jewel-form-right label {
   font-family: Poppins;
   font-size: 20px;
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
   line-height: 28px;
-  letter-spacing: normal;
   text-align: left;
   color: rgba(55, 52, 53, 0.7);
 }
@@ -593,11 +592,6 @@ input[type="number"] {
   border: solid 1px rgba(55, 52, 53, 0.3);
   background-color: #fff;
 }
-
-.jewel-form .jewel-form-right .form-check input[type="checkbox"]:before {
-  border-radius: 6px;
-  border: solid 1px rgba(55, 52, 53, 0.3);
-}
 .jewel-form .jewel-form-right input::placeholder {
   font-family: Poppins;
   font-size: 18px;
@@ -608,13 +602,39 @@ input[type="number"] {
   text-align: left;
   color: #3734354d;
 }
+.jewel-form .jewel-form-right .form-check {
+  width: 150px;
+  padding-left: 0px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.jewel-form .jewel-form-right .form-check-input {
+  border: 1px solid #4a7f5e;
+  background-color: #ffffff;
+}
+.jewel-form .jewel-form-right .form-check-input:checked[type="radio"] {
+  background: #4a7f5e;
+}
+.jewel-form .jewel-form-right .form-check-input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  border-radius: 6px;
+  padding-right: 5px;
+}
 .jewel-form .jewel-form-right input[type="text"],
 input[type="email"],
 input[type="number"],
-input[type="checkbox"]:focus {
+input[type="radio"]:focus {
+  border: 1px solid #3734354d;
   outline: none;
   box-shadow: none !important;
 }
+.jewel-form .jewel-form-right .form-control:focus {
+  border: 1px solid #3734354d;
+}
+
 .jewel-form .jewel-form-right .form-btn button {
   width: 100%;
   padding: 15px 40px;
@@ -652,16 +672,17 @@ input[type="checkbox"]:focus {
   letter-spacing: normal;
   text-align: center;
   color: #a17445;
+  margin: 0px;
+  padding-bottom: 30px;
 }
 .faq .faq-header p {
   font-family: Poppins;
   font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  font-weight: 400;
+  line-height: 27px;
   text-align: center;
   color: #a17445;
+  margin: 0px;
 }
 .faq .faq-content {
   padding-bottom: 60px;
