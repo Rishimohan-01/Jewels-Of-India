@@ -174,6 +174,15 @@ header .blur-rectangle .event-time .countdown .time-txt {
   text-align: left;
   color: #4a7f5e;
 }
+header .blur-rectangle .event-time .colon {
+  font-family: Manrope;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  text-align: center;
+  color: #4a7f5e;
+  margin: 0px;
+}
 header .blur-rectangle .border::after {
   content: "";
   position: absolute;
