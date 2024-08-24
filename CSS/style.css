@@ -507,17 +507,17 @@ header .blur-rectangle .number .num-details {
   text-align: center;
 }
 .about-jewels .about-jewels-video img {
-  width: 775px;
+  width: 789px;
   text-align: center;
   position: relative;
   z-index: 2;
 }
 .about-jewels .about-jewels-video iframe {
-  width: 640px;
-  height: 345px;
+  width: 652px;
+  height: 362px;
   position: absolute;
-  left: 355px;
-  top: 2909px;
+  left: 349px;
+  top: 2899px;
 }
 /* about jewels end */
 
@@ -611,10 +611,40 @@ input[type="number"] {
 }
 .jewel-form .jewel-form-right .form-check-input {
   border: 1px solid #4a7f5e;
-  background-color: #ffffff;
 }
-.jewel-form .jewel-form-right .form-check-input:checked[type="radio"] {
+.jewel-form .jewel-form-right input[type="radio"] {
+  appearance: none;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1;
+  padding: 0.25rem;
   background: #4a7f5e;
+  border: 1px solid var(--_clr-current);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.jewel-form .jewel-form-right input[type="radio"]:checked::after {
+  opacity: 1;
+  scale: 1;
+}
+
+.jewel-form .jewel-form-right input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out, scale 150ms ease-in-out;
+  width: 12px;
+  height: 7px;
+  border-left: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(-45deg);
+  top: 5px;
+  left: 4px;
 }
 .jewel-form .jewel-form-right .form-check-input[type="radio"] {
   width: 20px;
