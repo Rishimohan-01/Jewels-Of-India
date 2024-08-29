@@ -34,7 +34,7 @@
     <!-- header start -->
     <header>
       <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="./images/logo.png" alt="jewels of india" />
@@ -104,29 +104,38 @@
         <div class="hero">
           <div class="container">
             <div class="row">
-              <div class="col-md-1"></div>
-              <div class="col-md-7 d-flex align-items-center">
+              <div
+                class="hero-content-container col-md-7 col-sm-12 d-flex align-items-center justify-content-end"
+              >
                 <div class="hero-content">
                   <h4>India's Oldest & Biggest</h4>
                   <h2>Jewellery Exhibition</h2>
-                  <span
-                    ><iconify-icon
+                  <p>
+                    <iconify-icon
                       class="pe-2"
                       icon="tdesign:calendar-2"
                     ></iconify-icon
-                    >Oct 18 - 21, 2024</span
-                  >
-                  <span
-                    ><iconify-icon
+                    >Oct 18 - 21, 2024
+                  </p>
+                  <p>
+                    <iconify-icon
                       class="pe-2"
                       icon="gis:location-poi-o"
                     ></iconify-icon
-                    >Tripura Vasini, Bangalore</span
-                  >
+                    >Tripura Vasini, Palace Grounds, Bengaluru
+                  </p>
+                  <div class="hero-btn">
+                    <button class="btn btn-outline-success me-3" type="submit">
+                      Exhibitors Registration
+                    </button>
+                    <button class="btn btn-outline-success" type="submit">
+                      Visitors Registration
+                    </button>
+                  </div>
                   <button class="btn d-block mt-4">Register Now</button>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-5 col-sm-12">
                 <img
                   src="./images/model-saree.png"
                   class="Model_saree-1"
@@ -137,7 +146,7 @@
           </div>
         </div>
         <div class="blur-rectangle">
-          <div class="container-fluid">
+          <div class="container">
             <div class="row">
               <div class="col-md-3">
                 <p class="text-left fs-4">Time To Event</p>
@@ -219,8 +228,8 @@
     <!-- our exhibitor start -->
     <section class="exhibitor">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
+        <div class="row align-items-center exhibitor-corner">
+          <div class="col-md-5">
             <div class="mask-img">
               <img src="./images/mask-group-1.png" alt="" />
             </div>
@@ -249,16 +258,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 exhibitor-features-padding">
             <div class="exhibitor-features">
-              <div class="img-right">
-                <img src="./images/group-41966.png" alt="" />
-              </div>
-              <div class="img-left">
-                <img src="./images/group-41965.png" alt="" />
-              </div>
               <div
                 class="company-logo d-flex justify-content-around align-items-center"
               >
@@ -282,20 +283,24 @@
           </div>
         </div>
       </div>
+      <div class="img-right">
+        <img src="./images/group-41966.png" alt="" />
+      </div>
+      <div class="img-left">
+        <img src="./images/group-41965.png" alt="" />
+      </div>
     </section>
     <!-- our exhibitor end -->
 
     <!-- visitors hub start -->
     <section class="visitors-hub">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="title">
               <h2 class="text-center">Visitor's Hub</h2>
             </div>
           </div>
-        </div>
-        <div class="row">
           <div class="col-md-6">
             <div class="visitor-registration text-center">
               <div class="visitor-registration-content">
@@ -304,9 +309,9 @@
                   Visit us on 19, 20 and 21 October 2024, <br />
                   at tripura vasini, Palace Grounds.
                 </p>
-                <div class="register-now-btn">
-                  <a href="#" type="btn">Register Now</a>
-                </div>
+                <a class="register-now-btn" href="#register-now" type="btn"
+                  >Register Now</a
+                >
               </div>
             </div>
           </div>
@@ -318,9 +323,9 @@
                   Get exclusive first-to-explore and purchase <br />
                   access for all jewellery on 18th October 2024.
                 </p>
-                <div class="know-more-btn">
-                  <a href="#" type="btn">Know More</a>
-                </div>
+                <a class="know-more-btn" href="#know-more" type="btn"
+                  >Know More</a
+                >
               </div>
             </div>
           </div>
@@ -351,7 +356,7 @@
             <div class="about-jewels-video">
               <img src="./images/video-bg.png" alt="" />
               <iframe
-                width="858"
+                width="862"
                 height="486"
                 src="https://www.youtube.com/embed/CFY0XLCHn74?autoplay=1&mute=1&playlist=CFY0XLCHn74&loop=1 "
                 title="YouTube video player"
