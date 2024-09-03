@@ -12,31 +12,35 @@ a.nav-link {
 
 /* header start */
 header {
+  padding-top: 100px;
   background-image: url(../images/main-bg.jpg);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
 }
 
-header nav {
+nav {
   width: 100%;
   padding: 15px 48px !important;
   position: fixed !important;
+  top: 0px;
+  left: 0px;
   z-index: 999 !important;
-  /* background-color: #fff;
-  box-shadow: 0px 10px 38px -28px rgba(66, 68, 90, 1); */
+  backdrop-filter: blur(20.6px);
+  background-color: rgba(249, 249, 249, 0.35);
+  box-shadow: 0px 10px 38px -28px rgba(66, 68, 90, 1);
 }
 
-header nav a .navbar-brand img {
+nav a .navbar-brand img {
   width: 156px;
   height: 72px;
 }
 
-header nav ul {
+nav ul {
   padding-right: 24px;
 }
 
-header nav ul li a span {
+nav ul li a span {
   font-family: Poppins;
   font-size: 16px;
   font-weight: bold;
@@ -69,7 +73,6 @@ header nav ul li a span {
   background-color: #3e6c4d;
 }
 .hero {
-  height: 683px;
   background-image: url(../images/frame.png);
   background-size: 703px 500px;
   background-position: bottom right;
@@ -77,7 +80,11 @@ header nav ul li a span {
   object-fit: contain;
   margin-bottom: -54px;
 }
-
+.hero .hero-content-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .hero .hero-content h4 {
   margin-bottom: 20px;
   width: 100%;
@@ -145,13 +152,14 @@ iconify-icon {
   object-fit: contain;
   object-position: 15% 80%;
   max-width: 546px;
-  height: 700px;
 }
 
 /* blur rectangle start here */
 header .blur-rectangle {
   padding-top: 20px;
+  padding-right: 60px;
   padding-bottom: 10px;
+  padding-left: 60px;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background-color: rgba(249, 249, 249, 0.35);
@@ -195,7 +203,11 @@ header .blur-rectangle .event-time .colon {
   color: #4a7f5e;
   margin: 0px;
 }
-header .blur-rectangle .border::after {
+header .blur-rectangle .v-line {
+  display: flex;
+  justify-content: center;
+}
+header .blur-rectangle .v-line::after {
   content: "";
   position: absolute;
   bottom: 25px;
@@ -203,6 +215,11 @@ header .blur-rectangle .border::after {
   height: 73px;
   margin: 7px 38px 0 40px;
   background-color: #b2905f;
+}
+header .blur-rectangle .number {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 header .blur-rectangle .number .number-content {
   display: flex;
@@ -287,6 +304,9 @@ header .blur-rectangle .number .num-details {
 }
 .exhibitor .exhibitor-content {
   padding-left: 36px;
+}
+.exhibitor .mask-img h2 {
+  display: none;
 }
 .exhibitor .exhibitor-content .exhibitor-text h2 {
   margin-bottom: 20px;
@@ -560,8 +580,12 @@ header .blur-rectangle .number .num-details {
 }
 .about-jewels .about-jewels-video iframe {
   position: absolute;
-  left: 126px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   bottom: 0;
+  text-align: center;
 }
 /* about jewels end */
 
@@ -595,9 +619,6 @@ header .blur-rectangle .number .num-details {
 }
 
 .jewel-form .jewel-form-left .jewel-form-left-content .address {
-  display: flex;
-  justify-content: start;
-  align-items: center;
   padding-bottom: 11px;
 }
 .jewel-form .jewel-form-left .jewel-form-left-content .address img {
@@ -901,28 +922,44 @@ input[type="radio"]:focus {
 
 /* media query */
 @media (max-width: 767px) {
+  /* ================ nav start =================== */
+  nav {
+    display: none !important;
+  }
+  /* ================ nav end =================== */
+
+  /* ================ header start =================== */
+  /* ++ hero start ++ */
   .hero .hero-content-container {
-    justify-content: center;
+    justify-content: center !important;
   }
   .hero .hero-content {
     display: flex;
     flex-direction: column;
   }
   .hero .hero-content h4 {
-    font-size: 12px;
+    margin-bottom: 12px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: normal;
     text-align: center;
   }
   .hero .hero-content h2 {
+    margin-bottom: 12px;
     font-size: 32px;
+    font-weight: 400;
     line-height: 24px;
     text-align: center;
+    color: #a17445;
   }
-  .hero .hero-content span {
-    display: block;
+  .hero .hero-content p {
+    font-size: 14px;
     text-align: center;
-    font-size: 12px;
+    margin-bottom: 4px;
   }
-  .hero .hero-content span iconify-icon {
+  .hero .hero-content p iconify-icon {
     font-size: 12px;
   }
   .hero .hero-content .btn button {
@@ -935,30 +972,320 @@ input[type="radio"]:focus {
   }
   .hero img {
     max-width: 100%;
-    /* max-width: 340px;
-    height: 426px; */
   }
-  .hero .blur-rectangle {
+  /* ++ hero end ++ */
+  /* ++ blur rectangle start ++ */
+  .blur-rectangle {
     width: 100%;
+    padding: 8px 16px;
   }
-  .hero .blur-rectangle .text-left {
+  header .blur-rectangle .number {
+    align-items: center;
+    display: inline-block;
+  }
+  .blur-rectangle .event-time {
+    width: 200px;
+    margin: 0px auto;
+  }
+  .blur-rectangle p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    color: #a17445;
+  }
+  .blur-rectangle .event-time .countdown p {
+    font-family: Manrope;
+    font-size: 28px !important;
+    font-weight: bold;
+    line-height: 32px;
+    text-align: center;
+    color: #4a7f5e;
+  }
+  .blur-rectangle .event-time .countdown .time-txt {
+    font-size: 10px !important;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    color: #4a7f5e;
+  }
+  .blur-rectangle .event-time .colon {
+    font-size: 28px !important;
+    font-weight: bold;
+    line-height: 32px;
+    color: #4a7f5e;
+  }
+  .blur-rectangle .number .num {
+    font-size: 20px !important;
+    font-weight: bold;
+    line-height: 24px;
+    color: #4a7f5e;
+  }
+  .blur-rectangle .number .num-text {
+    font-size: 20px !important;
+    font-weight: bold;
+    line-height: 24px;
+    color: #4a7f5e;
+  }
+  .blur-rectangle .number .num-details {
+    font-size: 10px !important;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    color: #4a7f5e;
+  }
+  .blur-rectangle .v-line::after {
+    display: none;
+  }
+  /* ++ blur rectangle end ++ */
+  /* ================ header end =================== */
+
+  /* ================ exhibitor start =================== */
+  .exhibitor .exhibitor-corner {
+    padding: 40px 15px;
+  }
+  .exhibitor .mask-img {
     text-align: center;
   }
-  header .blur-rectangle .number .num {
-    font-size: 20px;
+  .exhibitor .mask-img h2 {
+    display: block;
+    -webkit-text-stroke: 0.5px #a17445;
+    font-family: Borest-Standard;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 38px;
+    text-align: center;
+    color: #a17445;
+    padding-bottom: 20px;
+    margin: 0px;
   }
-  header .blur-rectangle .number .num-text {
-    font-size: 20px;
+  .exhibitor .mask-img img {
+    width: 100%;
+    max-width: 238px;
+    height: 250px;
+    margin-bottom: 20px;
   }
-  iframe {
+  .exhibitor .exhibitor-content {
+    padding: 0px;
+  }
+  .exhibitor .exhibitor-text h2 {
     display: none;
+  }
+  .exhibitor .exhibitor-content .exhibitor-text p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    color: #a17445;
+    margin-bottom: 8px;
+  }
+  .exhibitor .exhibitor-content .exhibitor-btn {
+    display: flex;
+  }
+  .exhibitor .exhibitor-content .exhibitor-btn .register-btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .exhibitor .exhibitor-content .exhibitor-btn .floor-btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .exhibitor .img-right img {
+    width: 100%;
+    max-width: 39px;
+    height: 32px;
+    position: absolute;
+    bottom: 150px;
+  }
+  .exhibitor .img-left img {
+    display: none;
+  }
+  .exhibitor .img-left-mobile {
+    position: relative;
+    text-align: left;
+    z-index: -1;
+  }
+  .exhibitor .img-left-mobile img {
+    width: 100%;
+    max-width: 39px;
+    height: 32px;
+    position: absolute;
+    bottom: 10px;
+  }
+  .exhibitor .exhibitor-features .company-logo .CName {
+    margin: 0px 10px;
+    width: 125px;
+    height: 46px;
+    border-radius: 3.3px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
+      0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  .exhibitor .exhibitor-features .company-logo .CName img {
+    height: 20px;
+  }
+  /* ================ exhibitor end =================== */
+
+  /* ================ visitor hub start =================== */
+  .visitor-hub {
+    padding: 40px 0px;
+  }
+  .visitors-hub .title h2 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33px;
+    padding-bottom: 28px;
+  }
+  .visitors-hub .visitor-registration {
+    margin: 0px auto;
+    margin-bottom: 26px;
+    width: 100%;
+    max-width: 328px;
+    min-height: 342px;
+    padding-bottom: 0px;
+  }
+  .visitors-hub .vip-visitor-registration {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 328px;
+    min-height: 342px;
+    padding-bottom: 0px;
+  }
+  .visitors-hub .visitor-registration h2 {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .visitors-hub .visitor-registration p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .visitors-hub .visitor-registration a {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 8px 39px;
+  }
+  .visitors-hub .vip-visitor-registration h2 {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .visitors-hub .vip-visitor-registration p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .visitors-hub .vip-visitor-registration a {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 8px 39px;
+  }
+  /* ================ visitor hub end =================== */
+
+  /* ================ about jewels start =================== */
+  .about-jewels {
+    padding-top: 40px;
+  }
+  .about-jewels .about-jewels-txt h2 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33px;
+    padding-bottom: 12px;
   }
   .about-jewels .about-jewels-txt p {
     width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-bottom: 24px;
   }
   .about-jewels .about-jewels-video img {
     width: 100%;
   }
+  iframe {
+    width: 282px;
+    height: 160px;
+  }
+  /* ================ about jewels end =================== */
+
+  /* ================ jewels form start =================== */
+  .jewel-form {
+    padding: 40px 0px;
+  }
+  .jewel-form .jewel-form-left {
+    width: 100%;
+    max-width: 328px;
+    height: 497px;
+    margin: 0px auto;
+    padding: 12px;
+  }
+  .jewel-form .jewel-form-left .jewel-form-left-content .address img {
+    padding-right: 5px;
+    height: 14px;
+  }
+  .jewel-form .jewel-form-left .jewel-form-left-content span a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+  .jewel-form .jewel-form-left .jewel-form-left-content .contact img {
+    height: 14px;
+  }
+  .jewel-form .jewel-form-right {
+    padding-top: 40px;
+  }
+  .jewel-form .jewel-form-right h4 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-bottom: 28px;
+  }
+  .jewel-form .jewel-form-right label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .jewel-form .jewel-form-right input[type="text"] {
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  .jewel-form .jewel-form-right input[type="email"] {
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  .jewel-form .jewel-form-right input[type="number"] {
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  .jewel-form .jewel-form-right input[type="text"]::placeholder {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+  .jewel-form .jewel-form-right input[type="email"]::placeholder {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+  .jewel-form .jewel-form-right input[type="number"]::placeholder {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+  /* ================ jewels form end =================== */
+
+  /* ======================================== */
+
   .footer {
     width: 100%;
   }
