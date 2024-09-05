@@ -19,6 +19,10 @@ header {
   background-repeat: no-repeat;
 }
 
+.mobile-logo {
+  display: none;
+}
+
 nav {
   width: 100%;
   padding: 15px 48px !important;
@@ -85,6 +89,9 @@ nav ul li a span {
   justify-content: flex-end;
   align-items: center;
 }
+.hero .hero-content .mobile-logo {
+  display: none;
+}
 .hero .hero-content h4 {
   margin-bottom: 20px;
   width: 100%;
@@ -129,7 +136,6 @@ iconify-icon {
   font-size: 17px;
   padding-right: 8px;
 }
-
 .hero .hero-content .hero-btn {
   display: none;
 }
@@ -155,6 +161,9 @@ iconify-icon {
 }
 
 /* blur rectangle start here */
+header .count-num {
+  display: none;
+}
 header .blur-rectangle {
   padding-top: 20px;
   padding-right: 60px;
@@ -286,7 +295,7 @@ header .blur-rectangle .number .num-details {
   height: 180px;
   position: absolute;
   right: 0px;
-  bottom: 135px;
+  bottom: 170px;
 }
 .exhibitor .exhibitor-corner {
   justify-content: center;
@@ -381,6 +390,8 @@ header .blur-rectangle .number .num-details {
   }
 }
 .exhibitor .exhibitor-features .company-logo {
+  display: flex;
+  align-items: center;
   animation: scroll 20s linear infinite;
 }
 .exhibitor .exhibitor-features .company-logo .CName {
@@ -678,10 +689,6 @@ input[type="number"] {
   justify-content: start;
   align-items: center;
 }
-/* .jewel-form .jewel-form-right .form-check-input {
-  border: 1px solid #4a7f5e;
-  background-color: #4a7f5e;
-} */
 .jewel-form .jewel-form-right input[type="radio"] {
   appearance: none;
   outline: none;
@@ -689,7 +696,6 @@ input[type="number"] {
   height: 20px;
   aspect-ratio: 1;
   padding: 0.25rem;
-  background: #ffffff;
   border: 1px solid #4a7f5e;
   border-radius: 50%;
   display: grid;
@@ -697,25 +703,12 @@ input[type="number"] {
   cursor: pointer;
   position: relative;
 }
-
-.jewel-form .jewel-form-right input[type="radio"]:checked::after {
-  opacity: 1;
-  scale: 1;
+.form-check-input:checked[type="radio"] {
+  background-image: none;
 }
-
-/* .jewel-form .jewel-form-right input[type="radio"]::after {
-  content: "";
-  position: absolute;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out, scale 150ms ease-in-out;
-  width: 12px;
-  height: 7px;
-  border-left: 3px solid #4a7f5e;
-  border-bottom: 3px solid #4a7f5e;
-  transform: rotate(-45deg);
-  top: 5px;
-  left: 3px;
-} */
+.form-check-input:checked {
+  background-color: #4a7f5e;
+}
 .jewel-form .jewel-form-right .form-check-input[type="radio"] {
   width: 20px;
   height: 20px;
@@ -831,6 +824,9 @@ input[type="radio"]:focus {
   width: 100%;
   border-radius: 5px;
 }
+.faq-img-mobile {
+  display: none;
+}
 /* FAQ end */
 
 /* footer start */
@@ -853,7 +849,7 @@ input[type="radio"]:focus {
   width: 100%;
   height: 85px;
 }
-.footer img {
+.footer .social img {
   width: 36px;
   height: 36px;
 }
@@ -908,6 +904,11 @@ input[type="radio"]:focus {
   color: #ffffff;
   background-color: #4a7f5e;
 }
+.copyright .copyright-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .copyright h2 {
   font-family: Poppins;
   font-size: 14px;
@@ -915,7 +916,7 @@ input[type="radio"]:focus {
   line-height: 30px;
   letter-spacing: normal;
   text-align: left;
-  color: #fff;
+  color: #ffffff;
   margin: 0px;
 }
 /* copyright end */
@@ -923,6 +924,10 @@ input[type="radio"]:focus {
 /* media query */
 @media (max-width: 767px) {
   /* ================ nav start =================== */
+  .mobile-logo {
+    display: block;
+    text-align: left;
+  }
   nav {
     display: none !important;
   }
@@ -930,6 +935,20 @@ input[type="radio"]:focus {
 
   /* ================ header start =================== */
   /* ++ hero start ++ */
+  header {
+    padding-top: 0px;
+  }
+  header .hero-btn {
+    display: block;
+  }
+  .hero .mobile-logo img {
+    width: 100%;
+    max-width: 92px;
+    height: 42px;
+    margin-top: 20px;
+    margin-left: 16px;
+    margin-bottom: 40px;
+  }
   .hero .hero-content-container {
     justify-content: center !important;
   }
@@ -962,12 +981,16 @@ input[type="radio"]:focus {
   .hero .hero-content p iconify-icon {
     font-size: 12px;
   }
-  .hero .hero-content .btn button {
+  .hero .hero-content .hero-btn {
+    padding: 24px 0px;
+    display: block;
+  }
+  .hero .hero-content .hero-btn button {
     font-size: 12px;
     line-height: 24px;
     padding: 8px 17px 8px 17px;
   }
-  .hero .hero-content button {
+  .hero .hero-content .register-now-btn {
     display: none !important;
   }
   .hero img {
@@ -975,7 +998,7 @@ input[type="radio"]:focus {
   }
   /* ++ hero end ++ */
   /* ++ blur rectangle start ++ */
-  .blur-rectangle {
+  header .blur-rectangle {
     width: 100%;
     padding: 8px 16px;
   }
@@ -983,18 +1006,18 @@ input[type="radio"]:focus {
     align-items: center;
     display: inline-block;
   }
-  .blur-rectangle .event-time {
+  header .blur-rectangle .event-time {
     width: 200px;
     margin: 0px auto;
   }
-  .blur-rectangle p {
+  header .blur-rectangle p {
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
     text-align: center;
     color: #a17445;
   }
-  .blur-rectangle .event-time .countdown p {
+  header .blur-rectangle .event-time .countdown p {
     font-family: Manrope;
     font-size: 28px !important;
     font-weight: bold;
@@ -1002,39 +1025,58 @@ input[type="radio"]:focus {
     text-align: center;
     color: #4a7f5e;
   }
-  .blur-rectangle .event-time .countdown .time-txt {
+  header .blur-rectangle .event-time .countdown .time-txt {
     font-size: 10px !important;
     font-weight: 400;
     line-height: 16px;
     text-align: center;
     color: #4a7f5e;
   }
-  .blur-rectangle .event-time .colon {
+  header .blur-rectangle .event-time .colon {
     font-size: 28px !important;
     font-weight: bold;
     line-height: 32px;
     color: #4a7f5e;
   }
-  .blur-rectangle .number .num {
+  header .blur-rectangle .number {
+    display: none;
+  }
+  header .count-num {
+    display: block;
+  }
+  header .count-num .number .number-content {
+    text-align: center;
+  }
+  header .count-num .number {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 18px;
+    height: 88px;
+    -webkit-backdrop-filter: blur(20.6px);
+    backdrop-filter: blur(20.6px);
+    background-color: #deeae9;
+  }
+  header .count-num .number .num {
     font-size: 20px !important;
     font-weight: bold;
     line-height: 24px;
     color: #4a7f5e;
   }
-  .blur-rectangle .number .num-text {
+  header .count-num .number .num-text {
     font-size: 20px !important;
     font-weight: bold;
     line-height: 24px;
     color: #4a7f5e;
   }
-  .blur-rectangle .number .num-details {
+  header .count-num .number .num-details {
     font-size: 10px !important;
     font-weight: 400;
     line-height: 16px;
     text-align: center;
     color: #4a7f5e;
   }
-  .blur-rectangle .v-line::after {
+  header .blur-rectangle .v-line::after {
     display: none;
   }
   /* ++ blur rectangle end ++ */
@@ -1118,6 +1160,13 @@ input[type="radio"]:focus {
     position: absolute;
     bottom: 10px;
   }
+  .exhibitor .exhibitor-features {
+    display: flex;
+  }
+  .exhibitor .exhibitor-features .company-logo {
+    display: flex;
+    align-items: center;
+  }
   .exhibitor .exhibitor-features .company-logo .CName {
     margin: 0px 10px;
     width: 125px;
@@ -1146,14 +1195,12 @@ input[type="radio"]:focus {
     margin: 0px auto;
     margin-bottom: 26px;
     width: 100%;
-    max-width: 328px;
     min-height: 342px;
     padding-bottom: 0px;
   }
   .visitors-hub .vip-visitor-registration {
     margin: 0px auto;
     width: 100%;
-    max-width: 328px;
     min-height: 342px;
     padding-bottom: 0px;
   }
@@ -1189,6 +1236,14 @@ input[type="radio"]:focus {
     line-height: 24px;
     padding: 8px 39px;
   }
+  .visitors-hub .visitor-registration .visitor-registration-content {
+    padding-bottom: 24px;
+    height: auto;
+  }
+  .visitors-hub .vip-visitor-registration .vip-visitor-registration-content {
+    padding-bottom: 24px;
+    height: auto;
+  }
   /* ================ visitor hub end =================== */
 
   /* ================ about jewels start =================== */
@@ -1210,6 +1265,8 @@ input[type="radio"]:focus {
   }
   .about-jewels .about-jewels-video img {
     width: 100%;
+    max-width: 333px;
+    height: 180px;
   }
   iframe {
     width: 282px;
@@ -1223,7 +1280,6 @@ input[type="radio"]:focus {
   }
   .jewel-form .jewel-form-left {
     width: 100%;
-    max-width: 328px;
     height: 497px;
     margin: 0px auto;
     padding: 12px;
@@ -1233,7 +1289,7 @@ input[type="radio"]:focus {
     height: 14px;
   }
   .jewel-form .jewel-form-left .jewel-form-left-content span a {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     line-height: 17px;
   }
@@ -1242,6 +1298,15 @@ input[type="radio"]:focus {
   }
   .jewel-form .jewel-form-right {
     padding-top: 40px;
+  }
+  .jewel-form .jewel-form-right .space-bottom {
+    padding-bottom: 16px;
+  }
+  .jewel-form .jewel-form-right .space-bottom .form-check label {
+    padding-bottom: 0px;
+  }
+  .jewel-form .jewel-form-right .brand-name {
+    padding-bottom: 28px;
   }
   .jewel-form .jewel-form-right h4 {
     text-align: center;
@@ -1282,17 +1347,170 @@ input[type="radio"]:focus {
     font-weight: 300;
     line-height: 20px;
   }
+  .jewel-form .jewel-form-right .form-check-input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+  }
+  .jewel-form .jewel-form-right .form-check {
+    width: 100px;
+  }
+  .jewel-form .jewel-form-right .form-btn button {
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+  }
   /* ================ jewels form end =================== */
 
-  /* ======================================== */
+  /* ================ faq start =================== */
+  .faq {
+    padding-top: 40px;
+  }
+  .faq .faq-header {
+    margin: 0px auto;
+    width: 235px;
+    padding: 0px;
+    padding-bottom: 20px;
+  }
+  .faq .faq-header h2 {
+    font-size: 28px;
+    font-weight: 400;
+    padding-bottom: 12px;
+  }
+  .faq .faq-header .text {
+    display: none;
+  }
+  .faq .faq-header .mobile-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .faq-img-mobile {
+    width: 100%;
+    border-radius: 5px;
+    padding-bottom: 40px;
+  }
+  .faq-img {
+    display: none;
+  }
+  .faq .faq-content {
+    padding-bottom: 12px;
+  }
+  .faq .faq-content .accordion-item {
+    padding: 0px;
+  }
+  .faq .faq-content .accordion-item button {
+    font-size: 14px;
+    padding: 16px 0px;
+  }
+  .accordion {
+    --bs-accordion-border-width: 0px;
+    --bs-accordion-btn-icon-width: 14px;
+  }
+  .faq .faq-content .accordion-item .accordion-body {
+    font-size: 12px;
+    padding: 0px;
+    padding-bottom: 16px;
+  }
+  /* ================ faq end =================== */
 
+  /* ================ footer start =================== */
   .footer {
     width: 100%;
+    padding: 30px 0px 50px 0px;
+  }
+  .footer .footer-logo {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .footer .footer-text {
+    padding: 20px 0px;
+  }
+  .footer .footer-logo img {
+    width: 100%;
+    max-width: 92px;
+    height: 43px;
   }
   .footer .footer-text p {
     width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
   }
   .footer .social {
-    display: inline-block !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
+  .footer .social .address,
+  .call-us,
+  .mail-us {
+    text-align: center;
+  }
+  .footer .social img {
+    width: 100%;
+    max-width: 24px;
+    height: 24px;
+  }
+  .footer .follow-us {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .footer .follow-us img {
+    width: 100%;
+    max-width: 24px;
+    height: 24px;
+  }
+  .footer .social .social-txt p {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 19px;
+    text-align: center;
+    color: #bc8f60;
+  }
+  .footer .social .social-txt p:last-child {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 19px;
+    text-align: center;
+    color: #bc8f60;
+  }
+  .footer .social-txt p {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 19px;
+    text-align: center;
+    color: #bc8f60;
+  }
+  .footer .social-txt p:last-child {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 19px;
+    text-align: center;
+    color: #bc8f60;
+  }
+  .footer .social .follow-us {
+    display: inpine-block;
+  }
+  /* ================ footer end =================== */
+
+  /* ================ copyright start =================== */
+  .copyright .copyright-content {
+    padding: 4px 18px;
+  }
+  .copyright h2 {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+  }
+  /* ================ copyright end =================== */
+
+  /* ======================================== */
 }

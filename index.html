@@ -104,6 +104,9 @@
     <!-- header start -->
     <header>
       <div class="hero">
+        <div class="mobile-logo">
+          <img src="./images/logo.png" alt="jewels of india" />
+        </div>
         <div class="container">
           <div class="row">
             <div class="hero-content-container col-md-7 col-sm-12">
@@ -132,7 +135,9 @@
                     Visitors Registration
                   </button>
                 </div>
-                <button class="btn d-block mt-4">Register Now</button>
+                <button class="btn d-block mt-4 register-now-btn">
+                  Register Now
+                </button>
               </div>
             </div>
             <div class="col-md-5 col-sm-12">
@@ -219,6 +224,49 @@
           </div>
         </div>
       </div>
+      <div class="count-num">
+        <div class="col-md-8 number">
+          <span>
+            <div class="number-content">
+              <div class="d-flex justify-content-center">
+                <span class="num text-center" data-val="50">50</span>
+                <span class="num-text">K</span>
+              </div>
+
+              <span class="num-details text-center">Sq. Ft. Area</span>
+            </div>
+          </span>
+          <span>
+            <div class="number-content">
+              <div class="d-flex justify-content-center">
+                <span class="num text-center" data-val="500">500</span>
+                <span class="num-text">+</span>
+              </div>
+              <span class="num-details text-center">Exhibitors</span>
+            </div>
+          </span>
+          <span>
+            <div class="number-content">
+              <div class="d-flex justify-content-center">
+                <span class="num text-center" data-val="45">45</span>
+                <span class="num-text">K+</span>
+              </div>
+              <span class="num-details text-center">Buyers</span>
+            </div>
+          </span>
+          <span>
+            <div class="number-content">
+              <div class="d-flex justify-content-center">
+                <span class="num text-center" data-val="2">2</span>
+                <span class="num-text">Lac+</span>
+              </div>
+              <span class="num-details text-center"
+                >New Designs at Display</span
+              >
+            </div>
+          </span>
+        </div>
+      </div>
     </header>
     <!-- header end -->
 
@@ -258,9 +306,7 @@
           </div>
           <div class="col-md-12 exhibitor-features-padding">
             <div class="exhibitor-features">
-              <div
-                class="company-logo d-flex justify-content-around align-items-center"
-              >
+              <div class="company-logo">
                 <div class="CName">
                   <img src="./images/Group (4).png" alt="" />
                 </div>
@@ -409,26 +455,28 @@
               Register for <br />
               jewels of India 2024
             </h4>
-            <form class="row">
-              <div class="col-md-6 col-sm-6 space-bottom">
-                <label for="fname" class="form-label">First Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="First name"
-                  aria-label="First name"
-                />
+            <form class="col-sm-12">
+              <div class="row">
+                <div class="col space-bottom">
+                  <label for="fname" class="form-label">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First name"
+                    aria-label="First name"
+                  />
+                </div>
+                <div class="col space-bottom">
+                  <label for="lname" class="form-label">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last name"
+                    aria-label="Last name"
+                  />
+                </div>
               </div>
-              <div class="col-md-6 col-sm-6 space-bottom">
-                <label for="lname" class="form-label">Last Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Last name"
-                  aria-label="Last name"
-                />
-              </div>
-              <div class="col-md-12 col-sm-12 space-bottom">
+              <div class="co space-bottom">
                 <label for="inputEmail4" class="form-label">Email</label>
                 <input
                   type="email"
@@ -436,7 +484,7 @@
                   placeholder="you@company.com"
                 />
               </div>
-              <div class="col-md-12 col-sm-12 space-bottom">
+              <div class="co space-bottom">
                 <label for="inputNumber" class="form-label">Phone Number</label>
                 <input
                   type="number"
@@ -445,7 +493,7 @@
                   placeholder="+91 9999 99 9999"
                 />
               </div>
-              <div class="col-md-12 space-bottom d-flex align-items-center">
+              <div class="col space-bottom d-flex align-items-center">
                 <div class="form-check m-0">
                   <input
                     class="form-check-input me-2"
@@ -490,17 +538,21 @@
 
     <!-- FAQ start -->
     <section class="faq">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="faq-header">
               <h2 class="text-center">Frequently Asked Questions</h2>
-              <p class="text-center">
+              <p class="text-center text">
                 Lorem ipsum dolor sit amet consectetur. Sodales nibh elementum
                 mi lectus aliquet.
               </p>
+              <p class="text-center mobile-text">
+                Here are the answers for some of your most asked questions.
+              </p>
             </div>
           </div>
+          <img class="faq-img-mobile" src="./images/faq-img.png" alt="" />
           <div class="col-md-6 accordion" id="accordionExample">
             <div class="faq-content">
               <div class="accordion-item">
@@ -670,9 +722,9 @@
           <div class="col-md-6">
             <img class="faq-img" src="./images/faq-img.png" alt="" />
           </div>
-          <div class="col-md-12">
+          <div class="col-lg-12">
             <div class="footer">
-              <div class="footer-logo text-center">
+              <div class="footer-logo">
                 <img src="./images/footer-png.png" alt="" />
               </div>
               <div class="footer-text">
@@ -684,10 +736,8 @@
                   2023
                 </p>
               </div>
-              <div
-                class="social d-flex justify-content-around align-items-center"
-              >
-                <div class="address d-flex">
+              <div class="social">
+                <div class="address">
                   <span>
                     <img src="./images/location-icon.png" alt="address icon" />
                   </span>
@@ -696,7 +746,7 @@
                     <p>Tripura Vasini, Bangalore</p>
                   </span>
                 </div>
-                <div class="call-us d-flex">
+                <div class="call-us">
                   <span>
                     <img src="./images/call-icon.png" alt="Call us icon" />
                   </span>
@@ -705,7 +755,7 @@
                     <p>+91 9743036505</p>
                   </span>
                 </div>
-                <div class="mail-us d-flex">
+                <div class="mail-us">
                   <span>
                     <img src="./images/mail-icon.png" alt="mail us icon" />
                   </span>
@@ -714,17 +764,15 @@
                     <p>jewelsofindia@yahoo.com</p>
                   </span>
                 </div>
-                <div class="follow-us d-flex">
-                  <div class="fb-icon-img">
-                    <img src="./images/facebook-icon.png" alt="fb icon" />
-                  </div>
-                  <div>
-                    <img src="./images/instagram-icon.png" alt="insta icon" />
-                  </div>
-                  <div class="social-txt">
-                    <p>FOLLOW US</p>
-                    <p>@jewelsofindia_official</p>
-                  </div>
+              </div>
+              <div class="col-sm-12 follow-us">
+                <div class="fb-icon-img">
+                  <img src="./images/facebook-icon.png" alt="fb icon" />
+                  <img src="./images/instagram-icon.png" alt="insta icon" />
+                </div>
+                <div class="social-txt">
+                  <p>FOLLOW US</p>
+                  <p>@jewelsofindia_official</p>
                 </div>
               </div>
             </div>
@@ -738,9 +786,7 @@
     <section class="copyright">
       <div class="container-fluid">
         <div class="row">
-          <div
-            class="col-md-12 text-start d-flex justify-content-around align-items-center"
-          >
+          <div class="col-md-12 copyright-content">
             <h2>Privacy Policy</h2>
             <h2>Copyright © 2024 Jewels Of India</h2>
             <h2>Terms & Conditions</h2>
