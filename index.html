@@ -272,18 +272,20 @@
 
     <!-- our exhibitor start -->
     <section class="exhibitor">
+      <div class="scrolling-img">
+        <img
+          id="golden-neckless"
+          src="./images/golden-neckless.png"
+          class="gold-neckless"
+          alt="gold-neckless"
+        />
+      </div>
       <div class="container">
         <div class="row align-items-center exhibitor-corner">
           <div class="col-md-5">
             <div class="mask-img">
               <h2>Exhibitor's Corner</h2>
               <img src="./images/mask-group-1.png" alt="" />
-              <img
-                id="golden-neckless"
-                src="./images/golden-neckless.png"
-                class="gold-neckless"
-                alt="gold-neckless"
-              />
             </div>
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12">
@@ -389,6 +391,18 @@
 
     <!-- about jewels start -->
     <section class="about-jewels">
+      <div class="earrings-img">
+        <img
+          class="earrings earrings-1"
+          src="../images/earrings-1.png"
+          alt="earrings"
+        />
+        <img
+          class="earrings earrings-2"
+          src="../images/earrings-1.png"
+          alt="earrings"
+        />
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -426,6 +440,7 @@
     <!-- about jewels end -->
 
     <!-- jewels form start -->
+
     <section class="jewel-form">
       <div class="container">
         <div class="row align-items-center">
@@ -461,79 +476,95 @@
               Register for <br />
               jewels of India 2024
             </h4>
-            <form class="col-sm-12">
-              <div class="row">
-                <div class="col space-bottom">
-                  <label for="fname" class="form-label">First Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="First name"
-                    aria-label="First name"
-                  />
-                </div>
-                <div class="col space-bottom">
-                  <label for="lname" class="form-label">Last Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Last name"
-                    aria-label="Last name"
-                  />
-                </div>
-              </div>
-              <div class="co space-bottom">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="you@company.com"
-                />
-              </div>
-              <div class="co space-bottom">
-                <label for="inputNumber" class="form-label">Phone Number</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="inputNumber"
-                  placeholder="+91 9999 99 9999"
-                />
-              </div>
-              <div class="col space-bottom d-flex align-items-center">
-                <div class="form-check m-0">
-                  <input
-                    class="form-check-input me-2"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Visitor
-                  </label>
-                </div>
-                <div class="form-check m-0">
-                  <input
-                    class="form-check-input me-2"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Exhibitor
-                  </label>
-                </div>
-              </div>
-              <div class="col-md-12 brand-name">
-                <label for="bname" class="form-label">Brand Name</label>
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6">
+                <label for="fname" class="form-label">First name</label>
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Your brand name"
-                  aria-label="Brand Name"
+                  id="fname"
+                  placeholder="First name"
+                  required
                 />
+                <div class="invalid-feedback">Please enter your first name</div>
+              </div>
+              <div class="col-md-6">
+                <label for="lname" class="form-label">Last name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lname"
+                  placeholder="Last name"
+                  required
+                />
+                <div class="invalid-feedback">Please enter your last name</div>
+              </div>
+              <div class="col-md-12">
+                <label for="userEmail" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="userEmail"
+                    placeholder="you@company.com"
+                    aria-describedby="inputGroupPrepend"
+                    required
+                  />
+                  <div class="invalid-feedback">Please choose a username.</div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="phoneNumber"
+                  placeholder="+91 9999 99 9999"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a valid Phone Number.
+                </div>
+              </div>
+              <div class="col-md-4 justify-content-start form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="visitorValidation"
+                  name="radio-stacked"
+                  required
+                />
+                <label class="form-check-label" for="visitorValidation"
+                  >Visitor</label
+                >
+              </div>
+              <div class="col-md-8 justify-content-start form-check">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  id="exhibitorValidation"
+                  name="radio-stacked"
+                  required
+                />
+                <label class="form-check-label" for="exhibitorValidation"
+                  >Exhibitor</label
+                >
+              </div>
+              <div class="col-md-12">
+                <label for="brandName" class="form-label">Brand Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="brandName"
+                  placeholder="your Brand Name"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please provide a Your Brand Name
+                </div>
               </div>
               <div class="col-md-12 form-btn">
-                <button type="submit" class="btn form-btn">Submit</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -864,6 +895,9 @@
 
     <!-- company logo slider JS -->
     <script src="./JS/slider.js"></script>
+
+    <!-- form-validaton JS -->
+    <script src="./JS/bootstrap-form-validation.js"></script>
 
     <!-- bootstrap CDN -->
     <script
