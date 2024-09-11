@@ -9,6 +9,9 @@
 a.nav-link {
   padding: 0px;
 }
+nav .btn {
+  border: none;
+}
 
 /* header start */
 header {
@@ -27,14 +30,17 @@ nav {
   width: 100%;
   padding: 15px 48px !important;
   position: fixed !important;
+}
+nav.nav-scroll-active {
+  position: fixed !important;
   top: 0px;
   left: 0px;
   z-index: 999 !important;
   backdrop-filter: blur(20.6px);
   background-color: rgba(249, 249, 249, 0.35);
   box-shadow: 0px 10px 38px -28px rgba(66, 68, 90, 1);
+  transition: 0.4s;
 }
-
 nav a .navbar-brand img {
   width: 156px;
   height: 72px;
@@ -176,7 +182,7 @@ header .blur-rectangle {
 header .blur-rectangle p {
   margin: 0px;
   font-family: Manrope;
-  font-size: 32px;
+  font-size: 23px;
   font-weight: 600;
   line-height: 44px;
   text-align: left;
@@ -200,7 +206,7 @@ header .blur-rectangle .event-time .countdown .time-txt {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  text-align: left;
+  text-align: center;
   color: #4a7f5e;
 }
 header .blur-rectangle .event-time .colon {
@@ -272,12 +278,9 @@ header .blur-rectangle .number .num-details {
   background-repeat: no-repeat;
   position: relative;
 }
-/* .exhibitor .scrolling-img {
-  position: relative;
-} */
 .exhibitor .scrolling-img #golden-neckless {
   width: 100%;
-  max-width: 220px;
+  max-width: 210px;
   height: auto;
   position: absolute;
   top: 0%;
@@ -291,7 +294,6 @@ header .blur-rectangle .number .num-details {
 .exhibitor .img-left {
   text-align: left;
   position: relative;
-  z-index: -1;
 }
 .exhibitor .img-left img {
   width: 100%;
@@ -304,7 +306,6 @@ header .blur-rectangle .number .num-details {
 .exhibitor .img-right {
   text-align: right;
   position: relative;
-  z-index: -1;
 }
 .exhibitor .img-right img {
   width: 100%;
@@ -1175,11 +1176,11 @@ input[type="radio"]:focus {
   }
   .exhibitor .scrolling-img #golden-neckless-mobile {
     width: 100%;
-    max-width: 105px;
+    max-width: 108px;
     height: auto;
     position: absolute;
     top: 136px;
-    left: 145px;
+    left: 138px;
     /* opacity: 0; */
     z-index: 1;
     display: block;
@@ -1635,6 +1636,69 @@ input[type="radio"]:focus {
     text-align: center;
   }
   /* ================ copyright end =================== */
-
-  /* ======================================== */
+}
+/* ======================================== */
+/* ======================================== */
+@media (min-width: 320px) {
+  .hero .hero-content h2 {
+    line-height: 35px;
+  }
+  .exhibitor .scrolling-img #golden-neckless-mobile {
+    width: 100%;
+    max-width: 110px;
+    position: absolute;
+    left: 90px;
+  }
+  .hero .hero-content .hero-btn {
+    text-align: center;
+  }
+  .hero .hero-content .hero-btn button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 375px) {
+  .exhibitor .scrolling-img #golden-neckless-mobile {
+    width: 100%;
+    max-width: 110px;
+    position: absolute;
+    left: 119px;
+  }
+  .hero .hero-content .hero-btn {
+    text-align: center;
+  }
+  .hero .hero-content .hero-btn button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 425px) {
+  .exhibitor .scrolling-img #golden-neckless-mobile {
+    width: 100%;
+    max-width: 110px;
+    position: absolute;
+    left: 143px;
+  }
+}
+@media (min-width: 768px) {
+  .hero .hero-content .hero-btn button {
+    width: 100%;
+  }
+  header .count-num .number {
+    width: 100%;
+  }
+  .exhibitor .scrolling-img #golden-neckless-mobile {
+    left: 314px;
+  }
+  .visitors-hub .visitor-registration {
+    max-width: 100%;
+  }
+  .jewel-form .gap {
+    display: none;
+  }
+  .footer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1280px) {
 }

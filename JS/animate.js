@@ -8,9 +8,9 @@ var tl = gsap.timeline({
   },
 });
 
-tl.to(".scrolling-img #golden-neckless", {
-  top: "22%",
-  left: "18.7%",
+tl.to(".exhibitor .scrolling-img #golden-neckless", {
+  top: "21.5%",
+  left: "19.1%",
   opacity: 1,
 });
 
