@@ -323,9 +323,6 @@ header .blur-rectangle .number .num-details {
 .exhibitor .exhibitor-corner .exhibitor-features-padding {
   padding-top: 30px;
 }
-.exhibitor .mask-img {
-  /* position: relative; */
-}
 .exhibitor .mask-img img {
   width: 100%;
   max-width: 538px;
@@ -439,10 +436,10 @@ header .blur-rectangle .number .num-details {
   background-color: #fff;
 }
 .exhibitor .exhibitor-features .company-logo .CName:first-child {
-  margin-left: 5px;
+  margin-left: 20px;
 }
 .exhibitor .exhibitor-features .company-logo .CName:last-child {
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 /* our exhibitor end */
@@ -1707,7 +1704,14 @@ input[type="radio"]:focus {
   }
 }
 @media only screen and (max-width: 1280px) {
-  .exhibitor .scrolling-img #golden-neckless {
-    /* left: 17.1% !important; */
+  .exhibitor #golden-neckless {
+    width: 100%;
+    max-width: 261px;
+    height: 274px;
+    position: absolute;
+    top: 0%;
+    right: 50%;
+    z-index: 1;
+    opacity: 0;
   }
 }
