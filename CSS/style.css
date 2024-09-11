@@ -6,6 +6,10 @@
   src: url(../fonts/FontsFree-Net-Borest-Standard.ttf);
 }
 
+a {
+  text-decoration: none;
+}
+
 a.nav-link {
   padding: 0px;
 }
@@ -145,6 +149,10 @@ iconify-icon {
 .hero .hero-content .hero-btn {
   display: none;
 }
+.hero .hero-content a {
+  text-decoration: none;
+  color: #ffffff;
+}
 .hero .hero-content button {
   font-family: "Poppins", Sans-serif;
   font-size: 18px;
@@ -155,6 +163,7 @@ iconify-icon {
   background-color: #4a7f5e;
   border-radius: 5px 5px 5px 5px;
   padding: 16px 39px;
+  border: none;
 }
 .hero .hero-content button:hover {
   background-color: #3a5c4a;
@@ -396,12 +405,13 @@ header .blur-rectangle .number .num-details {
   letter-spacing: normal;
   text-align: center;
   color: #4a7f5e;
-  border: 1px solid #4a7f5e;
+  border: 2px solid #4a7f5e;
   padding: 15px 52px;
 }
 .exhibitor .exhibitor-content .exhibitor-btn .floor-btn:hover {
-  background-color: #3a5c4a;
-  color: #fff;
+  /* background-color: #3a5c4a; */
+  color: #3a5c4a;
+  border-color: #3a5c4a;
 }
 .exhibitor .exhibitor-features {
   height: 130px;
@@ -508,21 +518,19 @@ header .blur-rectangle .number .num-details {
   margin: 0px;
   padding-bottom: 32px;
 }
-.visitors-hub .visitor-registration a {
+.visitors-hub .visitor-registration .register-now-btn {
   text-decoration: none;
   color: #ffffff;
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: center;
   padding: 16px 39px;
   background-color: #4a7f5e;
   border-radius: 5px;
+  border: none;
 }
-.visitors-hub .visitor-registration a:hover {
+.visitors-hub .visitor-registration .register-now-btn:hover {
   background-color: #3a5a4f;
 }
 .visitors-hub .vip-visitor-registration {
@@ -566,7 +574,7 @@ header .blur-rectangle .number .num-details {
   text-align: center;
 }
 
-.visitors-hub .vip-visitor-registration a {
+.visitors-hub .vip-visitor-registration .know-more-btn {
   text-decoration: none;
   color: #ffffff;
   font-family: Poppins;
@@ -579,8 +587,9 @@ header .blur-rectangle .number .num-details {
   padding: 16px 39px;
   background-color: #4a7f5e;
   border-radius: 5px;
+  border: none;
 }
-.visitors-hub .vip-visitor-registration a:hover {
+.visitors-hub .vip-visitor-registration .know-more-btn:hover {
   background-color: #3a5a4f;
 }
 /* visitors hub end */

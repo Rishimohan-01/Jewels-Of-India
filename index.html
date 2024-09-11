@@ -34,7 +34,7 @@
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#home">
           <img src="./images/logo.png" alt="jewels of india" />
         </a>
         <button
@@ -89,12 +89,16 @@
             </li>
           </ul>
           <div class="btn">
-            <button class="btn btn-outline-success me-3" type="submit">
-              Exhibitors Registration
-            </button>
-            <button class="btn btn-outline-success" type="submit">
-              Visitors Registration
-            </button>
+            <a href="#JForm">
+              <button class="btn btn-outline-success me-3" type="submit">
+                Exhibitors Registration
+              </button>
+            </a>
+            <a href="#JForm">
+              <button class="btn btn-outline-success" type="submit">
+                Visitors Registration
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -102,7 +106,7 @@
     <!-- navbar end -->
 
     <!-- header start -->
-    <header>
+    <header id="home">
       <div class="hero">
         <div class="mobile-logo">
           <img src="./images/logo.png" alt="jewels of india" />
@@ -135,9 +139,11 @@
                     Visitors Registration
                   </button>
                 </div>
-                <button class="btn d-block mt-4 register-now-btn">
-                  Register Now
-                </button>
+                <a href="#JForm">
+                  <button class="btn d-block mt-4 register-now-btn">
+                    Register Now
+                  </button>
+                </a>
               </div>
             </div>
             <div class="col-md-5 col-sm-12">
@@ -271,15 +277,9 @@
     <!-- header end -->
 
     <!-- our exhibitor start -->
-    <section class="exhibitor">
+    <section class="exhibitor" id="blur">
       <div class="container">
         <div class="scrolling-img">
-          <!-- <img
-            id="golden-neckless"
-            src="./images/golden-neckless.png"
-            class="gold-neckless"
-            alt="gold-neckless"
-          /> -->
           <img
             id="golden-neckless-mobile"
             class="gold-neckless-mobile"
@@ -320,8 +320,20 @@
                 </p>
               </div>
               <div class="exhibitor-btn">
-                <a href="#" class="btn register-btn me-3">Register Now</a>
-                <a href="#" class="btn floor-btn">Floor Plan</a>
+                <a href="#JForm" onclick="toggle()">
+                  <input
+                    class="btn register-btn me-3"
+                    type="button"
+                    value="Register Now"
+                  />
+                </a>
+                <a href="#FloorPlan">
+                  <input
+                    class="btn floor-btn"
+                    type="button"
+                    value="Floor Plan"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -377,9 +389,12 @@
                   Visit us on 19, 20 and 21 October 2024, <br />
                   at tripura vasini, Palace Grounds.
                 </p>
-                <a class="register-now-btn" href="#register-now" type="btn"
-                  >Register Now</a
-                >
+                <a href="#JForm"
+                  ><input
+                    class="btn register-now-btn"
+                    type="button"
+                    value="Register Now"
+                /></a>
               </div>
             </div>
           </div>
@@ -391,9 +406,9 @@
                   Get exclusive first-to-explore and purchase <br />
                   access for all jewellery on 18th October 2024.
                 </p>
-                <a class="know-more-btn" href="#know-more" type="btn"
-                  >Know More</a
-                >
+                <a href="#know-more"
+                  ><input class="know-more-btn" type="button" value="Know More"
+                /></a>
               </div>
             </div>
           </div>
@@ -464,7 +479,7 @@
 
     <!-- jewels form start -->
 
-    <section class="jewel-form">
+    <section id="JForm" class="jewel-form">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 col-md-6 col-sm-6">
@@ -554,8 +569,10 @@
                   type="radio"
                   class="form-check-input"
                   id="visitorValidation"
-                  name="radio-stacked"
+                  name="radioBtn"
+                  value="City"
                   required
+                  checked
                 />
                 <label class="form-check-label" for="visitorValidation"
                   >Visitor</label
@@ -566,20 +583,23 @@
                   type="radio"
                   class="form-check-input"
                   id="exhibitorValidation"
-                  name="radio-stacked"
+                  name="radioBtn"
+                  value="Brand Name"
                   required
                 />
                 <label class="form-check-label" for="exhibitorValidation"
                   >Exhibitor</label
                 >
               </div>
-              <div class="col-md-12">
-                <label for="brandName" class="form-label">Brand Name</label>
+              <div class="col-md-12 form-group">
+                <label id="inputLabel" for="inputField" class="form-label"
+                  >City</label
+                >
                 <input
                   type="text"
                   class="form-control"
-                  id="brandName"
-                  placeholder="your Brand Name"
+                  id="inputField"
+                  placeholder="Enter your city"
                   required
                 />
                 <div class="invalid-feedback">
@@ -922,8 +942,14 @@
     <!-- animation script -->
     <script src="./JS/animate.js"></script>
 
+    <!-- Pop Up Js -->
+    <script src="./JS/popup.js"></script>
+
     <!-- company logo slider JS -->
     <script src="./JS/slider.js"></script>
+
+    <!-- Jewel form input JS -->
+    <script src="./JS/Jform.js"></script>
 
     <!-- form-validaton JS -->
     <script src="./JS/bootstrap-form-validation.js"></script>
