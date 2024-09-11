@@ -1,16 +1,17 @@
 var tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".mask-img",
-    start: "0% 95%",
-    end: "35% 50%",
+    start: "20% 95%",
+    end: "40% 50%",
     scrub: true,
     // markers: true,
+    opacity: 0,
   },
 });
 
-tl.to(".exhibitor .scrolling-img #golden-neckless", {
-  top: "21.5%",
-  left: "17.2%",
+tl.to(".exhibitor #golden-neckless", {
+  top: "18.5%",
+  left: "14.5%",
   opacity: 1,
 });
 
