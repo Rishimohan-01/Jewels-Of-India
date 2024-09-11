@@ -10,7 +10,7 @@ var tl = gsap.timeline({
 
 tl.to(".exhibitor .scrolling-img #golden-neckless", {
   top: "21.5%",
-  left: "19.1%",
+  left: "17.2%",
   opacity: 1,
 });
 

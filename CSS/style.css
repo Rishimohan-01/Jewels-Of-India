@@ -657,6 +657,9 @@ header .blur-rectangle .number .num-details {
 .jewel-form {
   padding: 60px 0px;
 }
+.jewel-form .gap {
+  display: block !important;
+}
 .jewel-form .jewel-form-left {
   background-image: url(../images/silver-neckless.png);
   background-size: cover;
@@ -1657,7 +1660,7 @@ input[type="radio"]:focus {
     margin-bottom: 20px;
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 320px) and (max-width: 576px) {
   .exhibitor .scrolling-img #golden-neckless-mobile {
     width: 100%;
     max-width: 110px;
@@ -1701,4 +1704,7 @@ input[type="radio"]:focus {
   }
 }
 @media only screen and (max-width: 1280px) {
+  .exhibitor .scrolling-img #golden-neckless {
+    /* left: 17.1% !important; */
+  }
 }
