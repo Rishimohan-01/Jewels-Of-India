@@ -705,10 +705,6 @@ header .blur-rectangle .number .num-details {
   width: 14px;
   height: 14px;
 }
-.visitors-hub .modal-dialog-centered {
-  display: block;
-  text-align: right;
-}
 .visitors-hub .modal-dialog {
   position: relative;
   width: auto;
