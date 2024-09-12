@@ -332,29 +332,91 @@
                     class="btn floor-btn"
                     type="button"
                     value="Floor Plan"
+                    id="floor-plan-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#floor-plan-modal"
                   />
                 </a>
+                <!-- Add a div for the popup content -->
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="floor-plan-modal"
+                  tabindex="-1"
+                  aria-labelledby="floor-plan-modal-label"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-center">
+                    <div class="modal-content">
+                      <button
+                        type="button"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <img src="./images/close-vector.svg" alt="" />
+                      </button>
+                      <div class="modal-header">
+                        <div class="left">
+                          <img src="./images/popup-logo.png" alt="" />
+                          <span class="pop-header-text">
+                            <p>
+                              <span
+                                ><img src="./images/calender.png" alt=""
+                              /></span>
+                              <span>Oct 18 - 21, 2024</span>
+                            </p>
+                            <p>
+                              <span
+                                ><img src="./images/location.png" alt=""
+                              /></span>
+                              <span
+                                >Tripura Vasini, Palace Grounds, Bangalore</span
+                              >
+                            </p>
+                          </span>
+                        </div>
+                        <div class="right">
+                          <img src="./images/organised-logo.png" alt="" />
+                        </div>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Add your floor plan content here -->
+                        <img
+                          src="./images/floor-plan-img.png"
+                          alt="Floor Plan"
+                        />
+                      </div>
+                      <div class="modal-footer">
+                        <img src="./images/call-popup.png" alt="" />
+                        <p>
+                          For Stall Booking Please Contact Mr. Hemanth Jain +91
+                          97430 36505
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-12 exhibitor-features-padding">
-            <div class="exhibitor-features">
-              <div class="company-logo">
-                <div class="CName">
-                  <img src="./images/Group (4).png" alt="" />
-                </div>
-                <div class="CName">
-                  <img src="./images/Group (1).png" alt="" />
-                </div>
-                <div class="CName">
-                  <img src="./images/Group (2).png" alt="" />
-                </div>
-                <div class="CName">
-                  <img src="./images/Group (3).png" alt="" />
-                </div>
-                <div class="CName">
-                  <img src="./images/Group.png" alt="" />
-                </div>
+        </div>
+        <div class="col-md-12 exhibitor-features-padding">
+          <div class="exhibitor-features">
+            <div class="company-logo">
+              <div class="CName">
+                <img src="./images/Group (4).png" alt="" />
+              </div>
+              <div class="CName">
+                <img src="./images/Group (1).png" alt="" />
+              </div>
+              <div class="CName">
+                <img src="./images/Group (2).png" alt="" />
+              </div>
+              <div class="CName">
+                <img src="./images/Group (3).png" alt="" />
+              </div>
+              <div class="CName">
+                <img src="./images/Group.png" alt="" />
               </div>
             </div>
           </div>
@@ -406,9 +468,81 @@
                   Get exclusive first-to-explore and purchase <br />
                   access for all jewellery on 18th October 2024.
                 </p>
-                <a href="#know-more"
-                  ><input class="know-more-btn" type="button" value="Know More"
-                /></a>
+                <a
+                  href="#know-more"
+                  data-bs-toggle="modal"
+                  data-bs-target="#know-more-modal"
+                >
+                  <input
+                    class="know-more-btn"
+                    type="button"
+                    value="Know More"
+                  />
+                </a>
+                <!-- Add a div for the popup content -->
+                <div
+                  class="modal fade"
+                  id="know-more-modal"
+                  tabindex="-1"
+                  aria-labelledby="know-more-modal-label"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <button
+                        type="button"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <img src="./images/close-black-vector.svg" alt="" />
+                      </button>
+                      <div class="modal-header">
+                        <h2 class="modal-title" id="know-more-modal-label">
+                          VIP Visitor Registration
+                        </h2>
+                        <p class="sub-heading">
+                          Experience the grandeur of Jewels of India 2024 like
+                          never before with our exclusive VIP registration for
+                          October 18th, the opening day of the event. 
+                        </p>
+                      </div>
+                      <div class="modal-body">
+                        <!-- Add your content here -->
+                        <p class="modal-body-heading">
+                          This special access allows you to
+                        </p>
+                        <ol>
+                          <li>
+                            <p>
+                              Be among the first to explore and purchase the
+                              exquisite jewellery collections before they are
+                              unveiled to the public.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Enjoy a day filled with luxury as the event kicks
+                              off with a grand opening ceremony led by our brand
+                              ambassador, Kannada film star Radhika Pandit,
+                              along with key media presence.
+                            </p>
+                          </li>
+                        </ol>
+                        <p class="modal-body-footer">
+                          Secure your VIP spot now for an unparalleled
+                          experience of glamour, exclusive offers, and the best
+                          jewellery shopping in India!
+                        </p>
+                      </div>
+                      <div class="modal-footer">
+                        <p>
+                          To buy VIP tickets, please contact Mr. Hemanth Jain at
+                          9743036505
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

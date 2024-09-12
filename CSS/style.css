@@ -413,6 +413,92 @@ header .blur-rectangle .number .num-details {
   color: #3a5c4a;
   border-color: #3a5c4a;
 }
+/* Style the modal */
+.exhibitor .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow-y: scroll;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.exhibitor .modal button {
+  background: transparent;
+  border: none;
+  text-align: right;
+}
+.exhibitor .modal-dialog {
+  position: relative;
+  width: auto;
+  max-width: 1080px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.exhibitor .modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 10px;
+  outline: 0;
+}
+
+.exhibitor .modal-header {
+  width: 980px;
+  max-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 37px 0px 0px 0px;
+  border: none;
+  margin: 0 auto;
+}
+.exhibitor .modal-header .left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.exhibitor .modal-header .left span p {
+  margin: 0px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  color: #a17445;
+}
+
+.exhibitor .modal-body {
+  text-align: center;
+  position: relative;
+  flex: 1 1 auto;
+  padding: 28px 0px 0px 0px;
+}
+
+.exhibitor .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 0px 0px 0px;
+  border: none;
+}
+.exhibitor .modal-footer p {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  color: #a17445;
+}
+
 .exhibitor .exhibitor-features {
   height: 130px;
   display: flex;
@@ -451,7 +537,9 @@ header .blur-rectangle .number .num-details {
 .exhibitor .exhibitor-features .company-logo .CName:last-child {
   margin-right: 20px;
 }
-
+.img-left-mobile {
+  display: none;
+}
 /* our exhibitor end */
 
 /* visitors hub start */
@@ -460,7 +548,7 @@ header .blur-rectangle .number .num-details {
   padding: 50px 0px;
 }
 
-.visitors-hub .title h2 {
+.title h2 {
   margin: 0px;
   padding-bottom: 40px;
   font-family: Borest-Standard;
@@ -472,13 +560,13 @@ header .blur-rectangle .number .num-details {
   text-align: left;
   color: #a17445;
 }
-.visitors-hub .visitor-registration .visitor-registration-content {
+.visitor-registration .visitor-registration-content {
   height: 170px;
 }
-.visitors-hub .vip-visitor-registration .vip-visitor-registration-content {
+.vip-visitor-registration .vip-visitor-registration-content {
   height: 170px;
 }
-.visitors-hub .visitor-registration {
+.visitor-registration {
   background-image: url(../images/Visitor\ Registration.gif),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
@@ -494,7 +582,7 @@ header .blur-rectangle .number .num-details {
   border-radius: 10px;
   padding-bottom: 76px;
 }
-.visitors-hub .visitor-registration h2 {
+.visitor-registration h2 {
   color: #ffffff;
   font-family: Borest-Standard;
   font-size: 40px;
@@ -506,7 +594,7 @@ header .blur-rectangle .number .num-details {
   margin: 0px;
   padding-bottom: 2px;
 }
-.visitors-hub .visitor-registration p {
+.visitor-registration p {
   color: #ffffff;
   font-family: Poppins;
   font-size: 18px;
@@ -518,7 +606,7 @@ header .blur-rectangle .number .num-details {
   margin: 0px;
   padding-bottom: 32px;
 }
-.visitors-hub .visitor-registration .register-now-btn {
+.visitor-registration .register-now-btn {
   text-decoration: none;
   color: #ffffff;
   font-family: Poppins;
@@ -530,10 +618,10 @@ header .blur-rectangle .number .num-details {
   border-radius: 5px;
   border: none;
 }
-.visitors-hub .visitor-registration .register-now-btn:hover {
+.visitor-registration .register-now-btn:hover {
   background-color: #3a5a4f;
 }
-.visitors-hub .vip-visitor-registration {
+.vip-visitor-registration {
   background-image: url(../images/VIP\ Visitor\ Registration.gif),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
@@ -549,7 +637,7 @@ header .blur-rectangle .number .num-details {
   border-radius: 10px;
   padding-bottom: 76px;
 }
-.visitors-hub .vip-visitor-registration h2 {
+.vip-visitor-registration h2 {
   color: #ffffff;
   font-family: Borest-Standard;
   font-size: 40px;
@@ -561,7 +649,7 @@ header .blur-rectangle .number .num-details {
   margin: 0px;
   padding-bottom: 2px;
 }
-.visitors-hub .vip-visitor-registration p {
+.vip-visitor-registration p {
   margin: 0px;
   padding-bottom: 32px;
   color: #ffffff;
@@ -574,7 +662,7 @@ header .blur-rectangle .number .num-details {
   text-align: center;
 }
 
-.visitors-hub .vip-visitor-registration .know-more-btn {
+.vip-visitor-registration .know-more-btn {
   text-decoration: none;
   color: #ffffff;
   font-family: Poppins;
@@ -589,8 +677,149 @@ header .blur-rectangle .number .num-details {
   border-radius: 5px;
   border: none;
 }
-.visitors-hub .vip-visitor-registration .know-more-btn:hover {
+.vip-visitor-registration .know-more-btn:hover {
   background-color: #3a5a4f;
+}
+/* Style the modal */
+.visitors-hub .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow-y: scroll;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.visitors-hub .modal button {
+  position: relative;
+  top: -20px;
+  right: -65px;
+  background: transparent;
+  border: none;
+  text-align: right;
+  font-size: 14px;
+}
+.visitors-hub .modal button img {
+  width: 14px;
+  height: 14px;
+}
+.visitors-hub .modal-dialog-centered {
+  display: block;
+  text-align: right;
+}
+.visitors-hub .modal-dialog {
+  position: relative;
+  width: auto;
+  max-width: 884px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 70px 40px 40px 40px;
+  border-bottom: 27px solid #4a7f5e;
+}
+
+.visitors-hub .modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 670px;
+  margin: 0px auto;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  outline: 0;
+}
+
+.visitors-hub .modal-header {
+  display: block !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  border: none;
+}
+
+.visitors-hub .modal-title {
+  font-family: Borest-Standard;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  color: #a17445 !important;
+  padding-bottom: 20px;
+}
+.visitors-hub .sub-heading {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  color: #a17445 !important;
+  margin: 0px auto;
+  padding-bottom: 20px;
+}
+
+.visitors-hub .modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0px;
+}
+.visitors-hub .modal-body p.modal-body-heading {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+  color: #a17445;
+  padding-bottom: 20px;
+}
+.visitors-hub .modal-body ol {
+  margin-bottom: 0px;
+  color: #a17445;
+}
+.visitors-hub .modal-body ol p {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  color: #a17445;
+  padding-bottom: 20px;
+}
+.visitors-hub .modal-body .modal-body-footer {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  color: #a17445;
+  padding-bottom: 20px;
+}
+.visitors-hub .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  border: none;
+}
+.visitors-hub .modal-footer p {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #a17445;
+  padding: 0px !important;
+}
+
+.visitors-hub .btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
 }
 /* visitors hub end */
 
