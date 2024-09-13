@@ -1468,6 +1468,7 @@ input[type="radio"]:focus {
   .exhibitor .exhibitor-content .exhibitor-btn a {
     max-width: 180px;
     width: 100%;
+    padding-right: 12px;
   }
   .exhibitor .exhibitor-content .exhibitor-btn a .register-btn {
     width: 100%;
@@ -1501,7 +1502,7 @@ input[type="radio"]:focus {
     max-width: 39px;
     height: 32px;
     position: absolute;
-    bottom: 150px;
+    bottom: 120px;
   }
   .exhibitor .img-left img {
     display: none;
@@ -1510,13 +1511,15 @@ input[type="radio"]:focus {
     position: relative;
     text-align: left;
     z-index: -1;
+    display: block;
   }
   .exhibitor .img-left-mobile img {
     width: 100%;
     max-width: 39px;
     height: 32px;
     position: absolute;
-    bottom: 10px;
+    top: 0px;
+    bottom: 0px;
   }
   .exhibitor .exhibitor-features {
     display: flex;
@@ -1623,9 +1626,17 @@ input[type="radio"]:focus {
     padding-bottom: 24px;
     height: auto;
   }
+  .visitor-registration .register-now-btn {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
   .visitors-hub .vip-visitor-registration .vip-visitor-registration-content {
     padding-bottom: 24px;
     height: auto;
+  }
+  .vip-visitor-registration .know-more-btn {
+    padding: 10px 30px;
+    font-size: 14px;
   }
   .visitors-hub .vip-visitor-registration .modal button {
     position: absolute;
