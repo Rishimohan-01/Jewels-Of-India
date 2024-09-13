@@ -296,21 +296,26 @@ header .blur-rectangle .number .num-details {
   right: 40%;
   opacity: 0;
   z-index: 1;
+  display: block;
 }
 .exhibitor .scrolling-img #golden-neckless-mobile {
+  display: none;
+}
+.jewel-body-img-mob {
   display: none;
 }
 .exhibitor .img-left {
   text-align: left;
   position: relative;
 }
-.exhibitor .img-left img {
+.exhibitor .img-left img.jewel-body-img {
   width: 100%;
   max-width: 220px;
   height: 260px;
   position: absolute;
   left: 0px;
   bottom: 0px;
+  display: block;
 }
 .exhibitor .img-right {
   text-align: right;
@@ -491,12 +496,23 @@ header .blur-rectangle .number .num-details {
   padding: 13px 0px 0px 0px;
   border: none;
 }
-.exhibitor .modal-footer p {
+.exhibitor .modal-footer ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+}
+.exhibitor .modal-footer ul p {
   font-family: Poppins;
   font-weight: 500;
   font-size: 22px;
   line-height: 30px;
   color: #a17445;
+}
+.exhibitor .pop-header-text {
+  display: block;
+}
+.exhibitor .pop-header-text-mobile {
+  display: none;
 }
 
 .exhibitor .exhibitor-features {
@@ -681,7 +697,7 @@ header .blur-rectangle .number .num-details {
   background-color: #3a5a4f;
 }
 /* Style the modal */
-.visitors-hub .modal {
+.visitors-hub .vip-visitor-registration .modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -692,8 +708,8 @@ header .blur-rectangle .number .num-details {
   outline: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.visitors-hub .modal button {
-  position: relative;
+.visitors-hub .vip-visitor-registration .modal button {
+  position: absolute;
   top: -20px;
   right: -65px;
   background: transparent;
@@ -701,11 +717,11 @@ header .blur-rectangle .number .num-details {
   text-align: right;
   font-size: 14px;
 }
-.visitors-hub .modal button img {
+.visitors-hub .vip-visitor-registration .modal button img {
   width: 14px;
   height: 14px;
 }
-.visitors-hub .modal-dialog {
+.visitors-hub .vip-visitor-registration .modal-dialog {
   position: relative;
   width: auto;
   max-width: 884px;
@@ -716,7 +732,7 @@ header .blur-rectangle .number .num-details {
   border-bottom: 27px solid #4a7f5e;
 }
 
-.visitors-hub .modal-content {
+.visitors-hub .vip-visitor-registration .modal-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -730,7 +746,7 @@ header .blur-rectangle .number .num-details {
   outline: 0;
 }
 
-.visitors-hub .modal-header {
+.visitors-hub .vip-visitor-registration .modal-header {
   display: block !important;
   align-items: center;
   justify-content: center;
@@ -738,7 +754,7 @@ header .blur-rectangle .number .num-details {
   border: none;
 }
 
-.visitors-hub .modal-title {
+.visitors-hub .vip-visitor-registration h2.modal-title {
   font-family: Borest-Standard;
   font-size: 40px;
   font-weight: 400;
@@ -747,7 +763,7 @@ header .blur-rectangle .number .num-details {
   color: #a17445 !important;
   padding-bottom: 20px;
 }
-.visitors-hub .sub-heading {
+.visitors-hub .vip-visitor-registration .sub-heading {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
@@ -758,12 +774,12 @@ header .blur-rectangle .number .num-details {
   padding-bottom: 20px;
 }
 
-.visitors-hub .modal-body {
+.visitors-hub .vip-visitor-registration .modal-body {
   position: relative;
   flex: 1 1 auto;
   padding: 0px;
 }
-.visitors-hub .modal-body p.modal-body-heading {
+.visitors-hub .vip-visitor-registration .modal-body p.modal-body-heading {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 600;
@@ -772,11 +788,11 @@ header .blur-rectangle .number .num-details {
   color: #a17445;
   padding-bottom: 20px;
 }
-.visitors-hub .modal-body ol {
+.visitors-hub .vip-visitor-registration .modal-body ol {
   margin-bottom: 0px;
   color: #a17445;
 }
-.visitors-hub .modal-body ol p {
+.visitors-hub .vip-visitor-registration .modal-body ol p {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
@@ -785,7 +801,7 @@ header .blur-rectangle .number .num-details {
   color: #a17445;
   padding-bottom: 20px;
 }
-.visitors-hub .modal-body .modal-body-footer {
+.visitors-hub .vip-visitor-registration .modal-body .modal-body-footer {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
@@ -794,28 +810,20 @@ header .blur-rectangle .number .num-details {
   color: #a17445;
   padding-bottom: 20px;
 }
-.visitors-hub .modal-footer {
+.visitors-hub .vip-visitor-registration .modal-footer {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0px;
   border: none;
 }
-.visitors-hub .modal-footer p {
+.visitors-hub .vip-visitor-registration .modal-footer p {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
   color: #a17445;
   padding: 0px !important;
-}
-
-.visitors-hub .btn-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
 }
 /* visitors hub end */
 
@@ -1128,6 +1136,8 @@ input[type="radio"]:focus {
 }
 .faq-img {
   width: 100%;
+  max-width: 627px;
+  height: 493px;
   border-radius: 5px;
 }
 .faq-img-mobile {
@@ -1244,7 +1254,7 @@ input[type="radio"]:focus {
 /* copyright end */
 
 /* media query */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* ================ nav start =================== */
   .mobile-logo {
     display: block;
@@ -1411,17 +1421,6 @@ input[type="radio"]:focus {
   .exhibitor .gold-neckless-mobile {
     display: block;
   }
-  .exhibitor .scrolling-img #golden-neckless-mobile {
-    width: 100%;
-    max-width: 108px;
-    height: auto;
-    position: absolute;
-    top: 136px;
-    left: 138px;
-    /* opacity: 0; */
-    z-index: 1;
-    display: block;
-  }
   .exhibitor .exhibitor-corner {
     padding: 40px 15px;
   }
@@ -1444,6 +1443,7 @@ input[type="radio"]:focus {
     width: 100%;
     max-width: 238px;
     height: 250px;
+    margin: 0px auto;
     margin-bottom: 20px;
   }
   .exhibitor .exhibitor-content {
@@ -1462,20 +1462,39 @@ input[type="radio"]:focus {
   }
   .exhibitor .exhibitor-content .exhibitor-btn {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  .exhibitor .exhibitor-content .exhibitor-btn .register-btn {
+  .exhibitor .exhibitor-content .exhibitor-btn a {
+    max-width: 180px;
+    width: 100%;
+  }
+  .exhibitor .exhibitor-content .exhibitor-btn a .register-btn {
     width: 100%;
     padding: 8px 10px;
     font-size: 12px;
     font-weight: 600;
     line-height: 24px;
   }
-  .exhibitor .exhibitor-content .exhibitor-btn .floor-btn {
+  .exhibitor .exhibitor-content .exhibitor-btn a .floor-btn {
     width: 100%;
     padding: 8px 10px;
     font-size: 12px;
     font-weight: 600;
     line-height: 24px;
+  }
+  .exhibitor .modal-header img {
+    width: 1005;
+    max-width: 92px;
+    height: 42px;
+  }
+  .pop-header-text span img {
+    width: 18px;
+    height: 18px !important;
+  }
+  .exhibitor .modal-header .left span p {
+    font-size: 12px;
+    line-height: 18px;
   }
   .exhibitor .img-right img {
     width: 100%;
@@ -1514,6 +1533,31 @@ input[type="radio"]:focus {
     box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05),
       0 10px 15px -3px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+  }
+
+  .exhibitor .modal-footer ul li p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .exhibitor .pop-header-text {
+    display: none;
+  }
+  .exhibitor .pop-header-text-mobile {
+    display: block;
+  }
+  .exhibitor .pop-header-text-mobile ul {
+    list-style: none;
+    padding-top: 12px;
+    padding-left: 0px;
+  }
+  .exhibitor .pop-header-text-mobile ul img {
+    height: 24px;
+  }
+  .exhibitor .pop-header-text-mobile ul li p {
+    font-size: 14px;
+    line-height: 18px;
+    color: #a17445;
+    margin: 0px;
   }
   .exhibitor .exhibitor-features .company-logo .CName img {
     height: 20px;
@@ -1582,6 +1626,15 @@ input[type="radio"]:focus {
   .visitors-hub .vip-visitor-registration .vip-visitor-registration-content {
     padding-bottom: 24px;
     height: auto;
+  }
+  .visitors-hub .vip-visitor-registration .modal button {
+    position: absolute;
+    top: -50px;
+    right: -25px;
+    background: transparent;
+    border: none;
+    text-align: right;
+    font-size: 14px;
   }
   /* ================ visitor hub end =================== */
 
@@ -1742,6 +1795,7 @@ input[type="radio"]:focus {
   }
   .faq-img-mobile {
     width: 100%;
+
     border-radius: 5px;
     padding-bottom: 40px;
     display: block;
@@ -1907,6 +1961,15 @@ input[type="radio"]:focus {
   .hero .hero-content .hero-btn button {
     width: 100%;
     margin-bottom: 20px;
+  }
+  .jewel-body-img-mob {
+    display: block;
+  }
+  .jewel-body-img {
+    display: none;
+  }
+  .gold-neckless-mobile {
+    display: none;
   }
 }
 @media (min-width: 425px) {
