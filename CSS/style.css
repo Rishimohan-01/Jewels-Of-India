@@ -304,11 +304,15 @@ header .blur-rectangle .number .num-details {
 .jewel-body-img-mob {
   display: none;
 }
+.jewel-body-img {
+  display: block;
+}
+
 .exhibitor .img-left {
   text-align: left;
   position: relative;
 }
-.exhibitor .img-left img.jewel-body-img {
+.exhibitor .img-left img {
   width: 100%;
   max-width: 220px;
   height: 260px;
@@ -638,7 +642,7 @@ header .blur-rectangle .number .num-details {
   background-color: #3a5a4f;
 }
 .vip-visitor-registration {
-  background-image: url(../images/VIP\ Visitor\ Registration.gif),
+  background-image: url(../images/VIP\ Visitor\ Registration1.gif),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
   background-size: cover;
