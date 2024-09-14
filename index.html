@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jewels Of India</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.webp" />
+
     <!-- boxicons -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
@@ -26,8 +29,11 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <!-- custom js for slider -->
-    <script src="./JS/countdown.js"></script>
+    <!-- swiper lilnk-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -35,7 +41,7 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#home">
-          <img src="./images/logo.png" alt="jewels of india" />
+          <img src="./images/logo.webp" alt="jewels of india" />
         </a>
         <button
           class="navbar-toggler"
@@ -61,7 +67,7 @@
               >
                 <img
                   class="me-2"
-                  src="./images/telephone.svg"
+                  src="./icons/telephone.svg"
                   alt="telephone svg"
                 />
                 <span>+91 9743036505</span>
@@ -71,7 +77,7 @@
               <a class="nav-link" href="mailto:jewelsofinida@yahoo.com">
                 <img
                   class="me-2"
-                  src="./images/mail-box.svg"
+                  src="./icons/mail-box.svg"
                   alt="telephone svg"
                 />
                 <span>jewelsofinida@yahoo.com</span>
@@ -79,12 +85,12 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#facebook">
-                <img src="./images/facebook.svg" alt="telephone svg" />
+                <img src="./icons/facebook.svg" alt="telephone svg" />
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#instagram">
-                <img src="./images/instagram.svg" alt="telephone svg" />
+                <img src="./icons/instagram.svg" alt="telephone svg" />
               </a>
             </li>
           </ul>
@@ -109,7 +115,7 @@
     <header id="home" loading="lazy">
       <div class="hero">
         <div class="mobile-logo">
-          <img src="./images/logo.png" alt="jewels of india" />
+          <img src="./images/logo.webp" alt="jewels of india" />
         </div>
         <div class="container">
           <div class="row">
@@ -148,7 +154,7 @@
             </div>
             <div class="col-md-5 col-sm-12">
               <img
-                src="./images/model-saree.png"
+                src="./images/modal-saree.webp"
                 class="Model_saree-1"
                 alt="hero image"
                 loading="lazy"
@@ -293,7 +299,7 @@
           <div class="col-lg-6 col-md-12 col-sm-12">
             <img
               id="golden-neckless"
-              src="./images/golden-neckless.png"
+              src="./images/Jewel.webp"
               class="gold-neckless"
               alt="gold-neckless"
               loading="lazy"
@@ -308,7 +314,7 @@
               />
               <img
                 class="jewel-body-img"
-                src="./images/mask-group-1.png"
+                src="./images/jewel-body.webp"
                 alt=""
                 loading="lazy"
               />
@@ -367,7 +373,7 @@
                         aria-label="Close"
                       >
                         <img
-                          src="./images/close-vector.svg"
+                          src="./icons/close-vector.svg"
                           loading="lazy"
                           alt=""
                           loading="lazy"
@@ -377,7 +383,7 @@
                         <div class="left">
                           <img
                             class="img-fluid"
-                            src="./images/popup-logo.png"
+                            src="./images/popup-logo.webp"
                             alt=""
                             loading="lazy"
                           />
@@ -385,7 +391,7 @@
                             <p>
                               <span
                                 ><img
-                                  src="./images/calender.png"
+                                  src="./icons/calender-icon.webp"
                                   loading="lazy"
                                   alt=""
                               /></span>
@@ -394,7 +400,7 @@
                             <p>
                               <span
                                 ><img
-                                  src="./images/location.png"
+                                  src="./icons/location-icon.webp"
                                   loading="lazy"
                                   alt=""
                               /></span>
@@ -407,7 +413,7 @@
 
                         <div class="right">
                           <img
-                            src="./images/organised-logo.png"
+                            src="./images/popup-org-logo.png"
                             alt=""
                             loading="lazy"
                           />
@@ -469,32 +475,107 @@
           </div>
         </div>
         <div class="col-md-12 exhibitor-features-padding">
-          <div class="exhibitor-features">
-            <div class="company-logo">
-              <div class="CName">
-                <img src="./images/Group (4).png" alt="" loading="lazy" />
+          <div class="exhibitor-features swiper">
+            <div class="company-logo swiper-wrapper">
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (4).png" alt="" loading="lazy" />
               </div>
-              <div class="CName">
-                <img src="./images/Group (1).png" alt="" loading="lazy" />
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (1).png" alt="" loading="lazy" />
               </div>
-              <div class="CName">
-                <img src="./images/Group (2).png" alt="" loading="lazy" />
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (2).png" alt="" loading="lazy" />
               </div>
-              <div class="CName">
-                <img src="./images/Group (3).png" alt="" loading="lazy" />
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (3).png" alt="" loading="lazy" />
               </div>
-              <div class="CName">
-                <img src="./images/Group.png" alt="" loading="lazy" />
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group.png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (4).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (1).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (2).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (3).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group.png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (4).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (1).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (2).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (3).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group.png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (4).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (1).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (2).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (3).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group.png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (4).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (1).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (2).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (3).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group.png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (4).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (1).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (2).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group (3).png" alt="" loading="lazy" />
+              </div>
+              <div class="CName swiper-slide">
+                <img src="./client-logo/Group.png" alt="" loading="lazy" />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="img-right">
-        <img src="./images/group-41966.png" alt="" loading="lazy" />
+        <img src="./images/group-right.webp" alt="" loading="lazy" />
       </div>
       <div class="img-left">
-        <img src="./images/group-41965.png" alt="" loading="lazy" />
+        <img src="./images/group-left.webp" alt="" loading="lazy" />
       </div>
       <div class="img-left-mobile">
         <img src="./images/left-img-mobile.png" alt="" loading="lazy" />
@@ -562,7 +643,7 @@
                         data-bs-dismiss="modal"
                         aria-label="Close"
                       >
-                        <img src="./images/close-black-vector.svg" alt="" />
+                        <img src="./icons/close-black-vector.svg" alt="" />
                       </button>
                       <div class="modal-header">
                         <h2 class="modal-title" id="know-more-modal-label">
@@ -665,16 +746,13 @@
           </div>
           <div class="col-md-12">
             <div class="about-jewels-video">
-              <img src="./images/video-bg.png" alt="" />
+              <img src="./images/video-bg.webp" alt="" />
               <iframe
                 width="862"
                 height="486"
-                src="https://www.youtube.com/embed/CFY0XLCHn74?autoplay=1&mute=1&playlist=CFY0XLCHn74&loop=1 "
+                src="https://www.youtube.com/embed/CFY0XLCHn74?autoplay=1&amp;mute=1&amp;playlist=CFY0XLCHn74&amp;loop=1"
                 title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                allowfullscreen=""
                 loading="lazy"
               ></iframe>
             </div>
@@ -693,18 +771,16 @@
             <div class="jewel-form-left">
               <div class="jewel-form-left-content">
                 <div class="address text-left pb-2">
-                  <span
-                    ><img src="./images/location-icon.png" alt="address"
-                  /></span>
+                  <span><img src="./icons/address.svg" alt="address" /></span>
                   <span><a href="#">Tripura Vasini, Bangalore</a></span>
                 </div>
                 <div class="contact d-flex">
                   <div class="mail pe-3">
-                    <span><img src="./images/call-icon.png" alt="" /></span>
+                    <span><img src="./icons/call-us.svg" alt="" /></span>
                     <span><a href="tel:+91 9743036505">+91 9743036505</a></span>
                   </div>
                   <div class="phone">
-                    <span><img src="./images/mail-icon.png" alt="" /></span>
+                    <span><img src="./icons/mail-to-us.svg" alt="" /></span>
                     <span
                       ><a href="mailto:jewelsofindia@yahoo.com"
                         >jewelsofindia@yahoo.com</a
@@ -1014,7 +1090,7 @@
           <div class="col-12">
             <div class="footer">
               <div class="footer-logo">
-                <img src="./images/footer-png.png" alt="" />
+                <img src="./images/footer-logo.svg" alt="" />
               </div>
               <div class="footer-text">
                 <p class="text-center">
@@ -1029,7 +1105,7 @@
               <div class="social-footer">
                 <span class="social">
                   <div>
-                    <img src="./images/location-icon.png" alt="address icon" />
+                    <img src="./icons/address.svg" alt="address icon" />
                   </div>
                   <div class="social-txt">
                     <p>ADDRESS</p>
@@ -1038,7 +1114,7 @@
                 </span>
                 <div class="social">
                   <span>
-                    <img src="./images/call-icon.png" alt="Call us icon" />
+                    <img src="./icons/call-us.svg" alt="Call us icon" />
                   </span>
                   <span class="social-txt">
                     <p>CALL US</p>
@@ -1047,7 +1123,7 @@
                 </div>
                 <div class="social">
                   <span>
-                    <img src="./images/mail-icon.png" alt="mail us icon" />
+                    <img src="./icons/mail-to-us.svg" alt="mail us icon" />
                   </span>
                   <span class="social-txt">
                     <p>MAIL US</p>
@@ -1056,8 +1132,8 @@
                 </div>
                 <div class="social">
                   <span class="fb-icon-img">
-                    <img src="./images/facebook-icon.png" alt="fb icon" />
-                    <img src="./images/instagram-icon.png" alt="insta icon" />
+                    <img src="./icons/fb-follow.svg" alt="fb icon" />
+                    <img src="./icons/instagram-follow.svg" alt="insta icon" />
                   </span>
                   <sapn class="social-txt">
                     <p>FOLLOW US</p>
@@ -1070,10 +1146,7 @@
                 <div class="social">
                   <div class="address">
                     <span>
-                      <img
-                        src="./images/location-icon.png"
-                        alt="address icon"
-                      />
+                      <img src="./icons/address.svg" alt="address icon" />
                     </span>
                     <span class="social-txt">
                       <p>Tripura Vasini, Palace Grounds, Bengaluru</p>
@@ -1081,7 +1154,7 @@
                   </div>
                   <div class="mail-us">
                     <span>
-                      <img src="./images/mail-icon.png" alt="mail us icon" />
+                      <img src="./icons/mail-to-us.svg" alt="mail us icon" />
                     </span>
                     <span class="social-txt">
                       <p>jewelsofindia@yahoo.com</p>
@@ -1089,7 +1162,7 @@
                   </div>
                   <div class="call-us">
                     <span>
-                      <img src="./images/call-icon.png" alt="Call us icon" />
+                      <img src="./icons/call-us.svg" alt="Call us icon" />
                     </span>
                     <span class="social-txt">
                       <p>+91 9743036505</p>
@@ -1098,8 +1171,8 @@
                 </div>
                 <div class="col-sm-12 follow-us">
                   <div class="fb-icon-img">
-                    <img src="./images/facebook-icon.png" alt="fb icon" />
-                    <img src="./images/instagram-icon.png" alt="insta icon" />
+                    <img src="./icons/fb-follow.svg" alt="fb icon" />
+                    <img src="./icons/instagram-follow.svg" alt="insta icon" />
                   </div>
                   <div class="social-txt">
                     <p>FOLLOW US</p>
@@ -1154,8 +1227,9 @@
     <!-- animation script -->
     <script src="./JS/animate.js"></script>
 
-    <!-- Pop Up Js -->
-    <script src="./JS/popup.js"></script>
+    <!-- swiper cdn script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./JS/slider.js"></script>
 
     <!-- company logo slider JS -->
     <script src="./JS/slider.js"></script>

@@ -1,4 +1,11 @@
-// var copy1 = document.querySelector(".company-logo").cloneNode(true);
-// document.querySelector(".exhibitor-features").appendChild(copy1);
-// var copy2 = document.querySelector(".company-logo").cloneNode(true);
-// document.querySelector(".exhibitor-features").appendChild(copy2);
+var swiper = new Swiper(".swiper", {
+  slidesPerView: "auto",
+  loop: true,
+  centeredSlides: true,
+  speed: 7000,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+  },
+});

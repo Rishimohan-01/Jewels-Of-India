@@ -16,11 +16,16 @@ a.nav-link {
 nav .btn {
   border: none;
 }
+.navbar-brand img {
+  width: 100%;
+  width: 156px;
+  height: 72px;
+}
 
 /* header start */
 header {
   padding-top: 100px;
-  background-image: url(../images/main-bg.jpg);
+  background-image: url(../images/main-bg.webp);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -87,7 +92,7 @@ nav ul li a span {
   background-color: #3e6c4d;
 }
 .hero {
-  background-image: url(../images/frame.png);
+  background-image: url(../images/hero-frame.webp);
   background-size: 703px 500px;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -281,7 +286,7 @@ header .blur-rectangle .number .num-details {
 
 /* our exhibitor start */
 .exhibitor {
-  background-image: url(../images/mask-group.png);
+  background-image: url(../images/exhibitor-bg.webp);
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
@@ -525,20 +530,22 @@ header .blur-rectangle .number .num-details {
   overflow: hidden;
 }
 
-@keyframes scroll {
+/* @keyframes scroll {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
   }
+} */
+.exhibitor .swiper .swiper-wrapper {
+  transition-timing-function: linear;
 }
-.exhibitor .exhibitor-features .company-logo {
+/* .exhibitor .exhibitor-features .company-logo {
   display: flex;
   align-items: center;
-  animation: scroll 20s linear infinite;
-}
-.exhibitor .exhibitor-features .company-logo .CName {
+} */
+.exhibitor .swiper .swiper-wrapper .swiper-slide {
   margin: 0px 20px;
   width: 228px;
   height: 84px;
@@ -587,7 +594,7 @@ header .blur-rectangle .number .num-details {
   height: 170px;
 }
 .visitor-registration {
-  background-image: url(../images/Visitor\ Registration.gif),
+  background-image: url(../images/Visitor-Registration.gif),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
   background-size: cover;
@@ -642,7 +649,7 @@ header .blur-rectangle .number .num-details {
   background-color: #3a5a4f;
 }
 .vip-visitor-registration {
-  background-image: url(../images/VIP\ Visitor\ Registration1.gif),
+  background-image: url(../images/VIP-Visitor-Registration.gif),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
   background-size: cover;
@@ -833,9 +840,9 @@ header .blur-rectangle .number .num-details {
 
 /* about jewels start */
 .about-jewels {
-  background-image: url(../images/about-jewels-bg.png);
+  background-image: url(../images/about-jewels-bg.webp);
   background-size: cover;
-  background-position: -65px bottom;
+  background-position: left;
   background-repeat: no-repeat;
   padding-top: 80px;
   position: relative;
@@ -884,6 +891,8 @@ header .blur-rectangle .number .num-details {
   position: relative;
 }
 .about-jewels .about-jewels-video img {
+  width: 1040px;
+  height: auto;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -907,7 +916,7 @@ header .blur-rectangle .number .num-details {
   display: block !important;
 }
 .jewel-form .jewel-form-left {
-  background-image: url(../images/silver-neckless.png);
+  background-image: url(../images/earrings-body.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1069,7 +1078,7 @@ input[type="radio"]:focus {
 
 /* FAQ start */
 .faq {
-  background-image: url(../images/footer-bg.svg);
+  background-image: url(../images/footer-bg.png);
   background-size: contain;
   background-position: bottom center;
   background-repeat: no-repeat;
