@@ -158,7 +158,7 @@ iconify-icon {
   text-decoration: none;
   color: #ffffff;
 }
-.hero .hero-content button {
+.hero .hero-content .hero-btn a input {
   font-family: "Poppins", Sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -170,7 +170,7 @@ iconify-icon {
   padding: 16px 39px;
   border: none;
 }
-.hero .hero-content button:hover {
+.hero .hero-content .hero-btn a input:hover {
   background-color: #3a5c4a;
 }
 .hero img {
@@ -477,6 +477,21 @@ header .blur-rectangle .number .num-details {
   border: none;
   margin: 0 auto;
 }
+.exhibitor .modal-header .left img {
+  width: 100%;
+  max-width: 156px;
+  height: 72px;
+}
+.exhibitor .modal-header .left span img {
+  width: 100%;
+  max-width: 29px;
+  height: 29px;
+}
+.exhibitor .modal-header .right img {
+  width: 100%;
+  max-width: 98px;
+  height: 64px;
+}
 .exhibitor .modal-header .left {
   display: flex;
   align-items: center;
@@ -516,6 +531,7 @@ header .blur-rectangle .number .num-details {
   font-size: 22px;
   line-height: 30px;
   color: #a17445;
+  margin-left: 8px;
 }
 .exhibitor .pop-header-text {
   display: block;
@@ -1253,7 +1269,7 @@ input[type="radio"]:focus {
 .copyright .copyright-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .copyright h2 {
   font-family: Poppins;
@@ -1331,7 +1347,7 @@ input[type="radio"]:focus {
     padding: 24px 0px;
     display: block;
   }
-  .hero .hero-content .hero-btn button {
+  .hero .hero-content .hero-btn a input {
     font-size: 12px;
     line-height: 24px;
     padding: 8px 17px 8px 17px;
@@ -1968,7 +1984,7 @@ input[type="radio"]:focus {
   .hero .hero-content .hero-btn {
     text-align: center;
   }
-  .hero .hero-content .hero-btn button {
+  .hero .hero-content .hero-btn a input {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -1983,7 +1999,7 @@ input[type="radio"]:focus {
   .hero .hero-content .hero-btn {
     text-align: center;
   }
-  .hero .hero-content .hero-btn button {
+  .hero .hero-content .hero-btn a input {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -2006,7 +2022,7 @@ input[type="radio"]:focus {
   }
 }
 @media (min-width: 768px) {
-  .hero .hero-content .hero-btn button {
+  .hero .hero-content .hero-btn a input {
     width: 100%;
   }
   header .count-num .number {

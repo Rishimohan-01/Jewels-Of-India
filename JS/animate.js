@@ -102,7 +102,7 @@ var tl3 = gsap.timeline({
     // markers: true,
   },
 });
-tl3.to(".about-jewels .earrings-img .earrings-2", {
+tl3.to(".about-jewels .earrings-img .earrings-1", {
   top: "253%",
   left: "61%",
 });
