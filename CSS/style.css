@@ -528,6 +528,7 @@ header .blur-rectangle .number .num-details {
   height: 130px;
   display: flex;
   overflow: hidden;
+  z-index: -1;
 }
 
 /* @keyframes scroll {
