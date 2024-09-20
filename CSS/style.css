@@ -158,6 +158,21 @@ iconify-icon {
   text-decoration: none;
   color: #ffffff;
 }
+.hero .hero-content a button {
+  font-family: "Poppins", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  fill: var(--e-global-color-e6b3573);
+  color: #ffffff;
+  background-color: #4a7f5e;
+  border-radius: 5px 5px 5px 5px;
+  padding: 16px 39px;
+  border: none;
+}
+.hero .hero-content a button:hover {
+  background-color: #3a5c4a;
+}
 .hero .hero-content .hero-btn a input {
   font-family: "Poppins", Sans-serif;
   font-size: 18px;
@@ -2051,5 +2066,11 @@ input[type="radio"]:focus {
     right: 50%;
     z-index: 1;
     opacity: 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+  .copyright .copyright-content {
+    justify-content: space-between;
   }
 }
